@@ -1,0 +1,98 @@
+svg[class*="icon"] {
+    transition: all var(--transition-duration);
+}
+
+.icon {
+    &__home {
+        height: 1.5rem;
+        width: 1.5rem;
+        fill: currentColor;
+        margin-top: .6rem;
+
+        &:hover {
+            fill: var(--white-light);
+        }
+    }
+
+    &__arrow1 {
+        height: 1rem;
+        width: 1rem;
+        fill: currentColor;
+        vertical-align: baseline;
+        margin-left: .3rem;
+    }
+
+    .header__nav-button:hover:hover > &__arrow1 {
+        fill: currentColor;
+    }
+
+    &__arrow2 {
+        vertical-align: sub;
+        animation: moveUpDown 2s 2s infinite;
+    }
+
+    &__social {
+        height: 1.3rem;
+        width: 1.3rem;
+        vertical-align: middle;
+        margin-right: 1rem;
+
+        &--facebook {
+            fill: #3b5998;
+            margin-bottom: .3rem;
+        }
+
+        &--instagram {
+            fill: #ea065f;
+            margin-bottom: .3rem;
+        }
+
+        &--spotify {
+            fill: #1db954;
+            margin-bottom: .1rem;
+        }
+
+        &--soundcloud {
+            fill: #ff8800;
+            margin-bottom: .2rem;
+        }
+
+    }
+
+    .header__nav-link-sub:hover:hover > &__social {
+        fill: currentColor;
+        transition: all var(--transition-duration-social);
+    }
+
+    &__map {
+        height: 20rem;
+        fill: rgba(255, 255, 255, 0.1);
+        position: absolute;
+        top: 83%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__phone {
+        height: 1.3rem;
+        fill: #fff;
+        position: absolute;
+        top: .4rem;
+        left: -3rem;
+    }
+
+    &__email {
+        height: 1.5rem;
+        fill: #fff;
+        position: absolute;
+        top: .55rem;
+        left: -3rem;
+    }
+
+    &__whatsapp {
+        height: 1.5rem;
+        position: absolute;
+        top: .02rem;
+        left: -3rem;
+    }
+}

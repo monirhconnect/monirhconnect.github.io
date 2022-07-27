@@ -1,0 +1,50 @@
+:root {
+    --default-font-size: 1.6rem;
+
+    --primary: #0a253b;
+    --primary-light: #0a253bfa;
+
+    --accent: #1fc1c3;
+    --accent-light: #62d4d5;
+
+    --white: #ddd;
+    --white-light: #eee;
+    --white-lighter: #fff;
+    --white-dim: #ccc;
+
+    --black: #222;
+    --black-light: #333;
+
+    --grey: #777;
+    --grey-light: #aaa;
+    --grey-lighter: #bbb;
+    --grey-dim: #555;
+
+    --grey-border: #c5c5c5;
+
+    --transition-duration: .2s;
+    --transition-duration-social: .25s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    max-width: 180rem;
+    margin: 0 auto;
+}

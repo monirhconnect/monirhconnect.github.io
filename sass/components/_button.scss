@@ -1,0 +1,31 @@
+.btn {
+    &:link,
+    &:visited {
+        display: inline-block;
+        color: var(--black-light);
+        background-color: var(--white);
+        border-radius: 100px;
+        text-decoration: none;
+        padding: .5rem 1rem .5rem 1.7rem;
+        transition: all var(--transition-duration);
+    }
+    
+    &:hover,
+    &:active {
+        background-color: var(--white-light);
+        box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .15);
+    }
+
+    &--cta {
+        &:link,
+        &:visited {
+            background-color: var(--accent);
+            padding: 0 1.7rem 0 1.5rem;
+        }
+
+        &:hover,
+        &:active {
+            background-color: var(--accent-light);
+        }
+    }
+}

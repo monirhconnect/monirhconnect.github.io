@@ -1,33 +1,21 @@
-const themeStylesheet = document.querySelector('#theme-link');
-const storedTheme = localStorage.getItem('theme-stored');
+const navBtn = document.querySelector('.header__nav-item--button');
+const navListSub = document.querySelector('.header__nav-list-sub');
 
-if (storedTheme) {
-    themeStylesheet.href = storedTheme;
+function navDropDown() {
+    navListSub.style.opacity = 1;
+    navListSub.style.visibility = 'visible';
+    navListSub.style.transform = 'translateY(1.4rem)';
+    navBtn.style.padding = '1.2rem 1.5rem 1.2rem .3rem';
 }
+navBtn.addEventListener('mouseover', navDropDown);
+navListSub.addEventListener('mouseover', navDropDown)
 
-const themeToggle = document.querySelector('#theme-toggle');
-themeToggle.addEventListener('click', function() {
-    // if it's light -> go dark
-    if (themeStylesheet.href.includes('light')) {
-        themeStylesheet.href = 'css/dark-theme.css';
-        themeToggle.textContent = 'Switch to light mode';
-    } else {
-        // if it's dark -> go light
-        themeStylesheet.href = 'css/light-theme.css';
-        
-        themeToggle.textContent = 'Switch to dark mode';
-    }
-    // save the preference to localStorage
-    localStorage.setItem('theme-stored', themeStylesheet.href);
-})
 
-if (storedTheme.includes('light')) {
-    themeToggle.innerText = 'Switch to dark mode';
-} else {
-    themeToggle.innerText = 'Switch to light mode';
+function navClose() {
+    navListSub.style.opacity = 0;
+    navListSub.style.visibility = 'hidden';
+    navListSub.style.transform = 'translateY(-1.4rem)';
+    navBtn.style.padding = '.1rem 1.5rem .1rem .3rem';
 }
-
-
-const header = document.querySelector('header');
-const headerHeight = '150px';
-header.style.padditngBottom = '100vh' ;
+navBtn.addEventListener('mouseleave', navClose);
+navListSub.addEventListener('mouseleave', navClose);
