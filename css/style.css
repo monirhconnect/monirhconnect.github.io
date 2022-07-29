@@ -132,7 +132,6 @@ body {
   background-color: var(--accent-light); }
 
 .footer {
-  width: 99%;
   font-size: 1.4rem;
   color: var(--white-dim);
   background-color: var(--primary);
