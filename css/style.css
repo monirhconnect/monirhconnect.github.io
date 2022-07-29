@@ -50,12 +50,14 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent; }
-  @media (max-width: 1200px) {
-    html {
-      font-size: 56.25%; } }
-  @media (max-width: 900px) {
-    html {
-      font-size: 50%; } }
+
+@inclugde respond(tab-land) {
+  html {
+    font-size: 56.25%; } }
+
+@includge respond(tab-port) {
+  html {
+    font-size: 50%; } }
   @media (min-width: 1800px) {
     html {
       font-size: 75%; } }
