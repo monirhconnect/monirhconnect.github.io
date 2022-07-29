@@ -127,6 +127,7 @@ body {
   position: relative; }
 
 .btn-link--cta:link, .btn-link--cta:visited {
+  font-weight: 700;
   background-color: var(--accent);
   padding: 0 1.7rem 0 1.5rem; }
 
@@ -198,7 +199,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.3);
   background-color: #ddd;
   padding-inline: 10rem;
@@ -206,9 +206,6 @@ body {
   top: 0;
   left: 0;
   z-index: 10; }
-  @media (max-width: 1200px) {
-    .header {
-      position: relative; } }
   .header__logo-container {
     margin-right: auto;
     background-color: #122c41;
@@ -276,9 +273,14 @@ body {
     transition: all .3s, visibility .2s; }
     @media (max-width: 1200px) {
       .header__nav-list-sub {
-        transition: all .3s, visibility .2s, width 0s;
+        width: 99%;
+        display: block;
+        margin-right: .5rem;
+        top: 3.6rem;
         right: 0;
-        box-shadow: none; } }
+        background-color: #122c41;
+        box-shadow: none;
+        transition: all .3s, visibility .2s, width 0s; } }
     .header__nav-list-sub::before {
       content: "";
       display: block;
@@ -290,18 +292,30 @@ body {
       left: 0; }
   .header__nav-item-sub:not(:last-child) {
     border-bottom: 1px solid var(--grey-border); }
+    @media (max-width: 1200px) {
+      .header__nav-item-sub:not(:last-child) {
+        border-bottom: none; } }
   .header__nav-item-sub:last-child {
     margin-bottom: 1rem; }
+  @media (max-width: 1200px) {
+    .header__nav-item-sub {
+      transform: translateX(45%); } }
   .header__nav-link-sub:link, .header__nav-link-sub:visited {
     display: inline-block;
     width: 100%;
     color: #222;
     text-decoration: none;
     padding: 1rem 1.5rem; }
+    @media (max-width: 1200px) {
+      .header__nav-link-sub:link, .header__nav-link-sub:visited {
+        color: #ddd; } }
   .header__nav-link-sub:hover, .header__nav-link-sub:active {
     color: var(--white);
     background-color: var(--primary-light);
     background-color: #122c41; }
+    @media (max-width: 1200px) {
+      .header__nav-link-sub:hover, .header__nav-link-sub:active {
+        background-color: transparent; } }
 
 svg[class*="icon"] {
   transition: all var(--transition-duration); }
@@ -395,7 +409,7 @@ svg[class*="icon"] {
   position: relative; }
   @media (max-width: 1200px) {
     .section-hero {
-      height: 60vh;
+      height: 80vh;
       margin-top: 0; } }
   .section-hero__text-box {
     position: absolute;

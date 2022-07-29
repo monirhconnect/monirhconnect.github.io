@@ -3,7 +3,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 700;
     box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .3);
     background-color: #ddd;
     padding-inline: 10rem;
@@ -11,10 +10,6 @@
     top: 0;
     left: 0;
     z-index: 10;
-
-    @include respond(tab-land) {
-        position: relative;
-    }
 
     &__logo-container {
         margin-right: auto;
@@ -114,9 +109,14 @@
         transition: all .3s, visibility .2s;
 
         @include respond(tab-land) {
-            transition: all .3s, visibility .2s, width 0s;
+            width: 99%;
+            display: block;
+            margin-right: .5rem;
+            top: 3.6rem;
             right: 0;
+            background-color: #122c41;
             box-shadow: none;
+            transition: all .3s, visibility .2s, width 0s;
         }
 
         &::before {
@@ -134,10 +134,18 @@
     &__nav-item-sub {
         &:not(:last-child) {
             border-bottom: 1px solid var(--grey-border);
+
+            @include respond(tab-land) {
+                border-bottom: none;
+            }
         }
 
         &:last-child {
             margin-bottom: 1rem;
+        }
+
+        @include respond(tab-land) {
+            transform: translateX(45%);
         }
     }
 
@@ -149,6 +157,10 @@
             color: #222;
             text-decoration: none;
             padding: 1rem 1.5rem;
+
+            @include respond(tab-land) {
+                color: #ddd;
+            }
         }
 
         &:hover,
@@ -156,6 +168,10 @@
             color: var(--white);
             background-color: var(--primary-light);
             background-color: #122c41;
+
+            @include respond(tab-land) {
+                background-color: transparent;
+            }
         }
     }
 }
