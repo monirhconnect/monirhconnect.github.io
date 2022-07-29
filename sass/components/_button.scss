@@ -1,4 +1,4 @@
-.btn {
+.btn-link {
     &:link,
     &:visited {
         display: inline-block;
@@ -7,6 +7,7 @@
         border-radius: 100px;
         text-decoration: none;
         padding: .5rem 1rem .5rem 1.7rem;
+        margin-left: .2rem;
         transition: all var(--transition-duration);
     }
     
@@ -14,6 +15,14 @@
     &:active {
         background-color: var(--white-light);
         box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .15);
+    }
+
+    &--overview {
+        &:link,
+        &:visited {
+            padding: 1rem 3.8rem 1rem 2.5rem;
+            position: relative;
+        }
     }
 
     &--cta {

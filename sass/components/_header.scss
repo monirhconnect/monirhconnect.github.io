@@ -5,21 +5,16 @@
     align-items: center;
     font-weight: 700;
     box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .3);
-    backgrfound-image: linear-gradient(
-        120deg,
-        var(--white) 0%,
-        var(--white) 35%,
-        var(--primary) 35%,
-        var(--primary) 100%
-        );
-
     background-color: #ddd;
     padding-inline: 10rem;
-    position:sticky;
+    position: sticky;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 10;
+
+    @include respond(tab-land) {
+        position: relative;
+    }
 
     &__logo-container {
         margin-right: auto;
@@ -40,7 +35,6 @@
 
     &__nav-item {
         margin-inline: 2rem;
-        position: relative;
         cursor: pointer;
 
         &:last-child {
@@ -48,8 +42,13 @@
         }
 
         &--button {
+            position: relative;
             padding: .1rem 1.5rem .1rem .3rem;
             transition: all var(--transition-duration);
+
+            @include respond(tab-land) {
+                position: static;
+            }
 
             &:hover {
                 padding: 1.2rem 1.5rem 1.2rem .3rem;
@@ -84,6 +83,12 @@
         border: none;
         cursor: pointer;
         margin-inline: .2rem -1rem;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: transparent;
+        }
     }
 
     &__nav-item--button:hover > &__nav-button {
@@ -96,6 +101,7 @@
         width: 22rem;
         font-size: 1.4rem;
         background-color: var(--white);
+        background-color: #ddd;
         position: absolute;
         top: 4rem;
         right: -2.5rem;
@@ -106,6 +112,12 @@
         visibility: hidden;
         transform: translateY(-1.4rem);
         transition: all .3s, visibility .2s;
+
+        @include respond(tab-land) {
+            transition: all .3s, visibility .2s, width 0s;
+            right: 0;
+            box-shadow: none;
+        }
 
         &::before {
             content: "";

@@ -3,6 +3,20 @@
 .u-margin-bottom-medium {margin-bottom: 4rem}
 .u-margin-bottom-big {margin-bottom: 5rem}
 
+.u-line-break {
+    display: block;
+
+    @include respond(tab-land) {
+        display: inline;
+    }
+}
+
+.u-line-break-tab-land {
+    @include respond(tab-land) {
+        display: block;
+    }
+}
+
 
 .u-link {
     &__white {

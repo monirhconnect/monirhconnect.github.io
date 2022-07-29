@@ -14,26 +14,33 @@
         align-items: flex-start;
         gap: 10rem;
         margin: 6rem 11.5rem 5.5rem;
+
+        @include respond(tab-land) {
+            gap: 6rem;
+        }
+    }
+    
+    &__office {
+        flex: 1;
+    }
+    
+    &__link-box {
+        flex: 1;
     }
 
     &__about {
         flex: 3;
         position: relative;
     }
-    
-    &__link-box {
-        flex: 1;
-        margin-tofp: 4rem;
-    }
 
-    &__office {
-        flex: 1;
-    }
-
-    &__email-box {
-        margin-top: .4rem;
+    &__office-item-box {
+        padding: .15rem 0;
         margin-left: 3.1rem;
         position: relative;
+    }
+
+    &__phone {
+        margin-bottom: -.7rem;
     }
 
     &__email {
@@ -41,12 +48,6 @@
         font-size: 1.6rem;
         padding-bottom: -1rem;
         border-bottom: 1px solid currentColor;
-    }
-
-    &__whatsapp-box {
-        margin-left: 3.1rem;
-        margin-bottom: -.001rem;
-        position: relative;
     }
 
     &__whatsapp {
@@ -71,7 +72,6 @@
         &:hover,
         &:active {
             text-decoration: underline;
-            
         }
     }
 

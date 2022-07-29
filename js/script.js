@@ -1,11 +1,19 @@
 const navBtn = document.querySelector('.header__nav-item--button');
 const navListSub = document.querySelector('.header__nav-list-sub');
 
+
+let navListSubHeight = navListSub.offsetHeight;
+const body = document.querySelector('body');
+let bodyWidth = body.offsetWidth;
+
+
 function navDropDown() {
     navListSub.style.opacity = 1;
     navListSub.style.visibility = 'visible';
     navListSub.style.transform = 'translateY(1.4rem)';
     navBtn.style.padding = '1.2rem 1.5rem 1.2rem .3rem';
+
+    navListSub.style.width = `${bodyWidth}px`;
 }
 navBtn.addEventListener('mouseover', navDropDown);
 navListSub.addEventListener('mouseover', navDropDown)
