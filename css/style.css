@@ -20,8 +20,7 @@ Big desktop       > big-desktop
   --primary-light: #122c41fa;
   --accent: #1fc1c3;
   --accent-light: #62d4d5;
-  --white: #eee;
-  --white-light: #fff;
+  --white: #fff;
   --white-dim: #ddd;
   --black: #222;
   --black-light: #333;
@@ -203,6 +202,10 @@ body {
   top: 0;
   left: 0;
   z-index: 10; }
+  @media (max-width: 1200px) {
+    .header {
+      position: fixed;
+      width: 100%; } }
   .header__logo-container {
     margin-right: auto;
     background-color: var(--primary);
