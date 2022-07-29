@@ -1,9 +1,8 @@
 .footer {
     width: 99%;
     font-size: 1.4rem;
-    color: var(--grey-lighter);
+    color: var(--white-dim);
     background-color: var(--primary);
-    background-color: #122c41;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -40,6 +39,7 @@
     }
 
     &__phone {
+        color: var(--white-dim);
         margin-bottom: -.7rem;
     }
 
@@ -51,12 +51,12 @@
     }
 
     &__whatsapp {
-        color: var(--white);
+        color: var(--white-dim);
         font-size: 1.2rem;
     }
 
     &__text {
-        color: #aaa;
+        color: var(--white-dim);
     }
 
     &__link {
@@ -64,8 +64,7 @@
         &:visited {
             display: block;
             width: fit-content;
-            color: var(--accent);
-            color: #bbb;
+            color: var(--white-dim);
             text-decoration: none;
         }
         
@@ -76,7 +75,7 @@
     }
 
     &__heading-secondary {
-        color: var(--white-dim);
+        color: var(--white);
     }
 
     &__legal-area {
@@ -88,6 +87,6 @@
     }
 
     &__copyright {
-        color: var(--grey-light);
+        color: var(--white-dim);
     }
 }

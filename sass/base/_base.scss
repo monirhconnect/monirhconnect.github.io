@@ -1,16 +1,15 @@
 :root {
     --default-font-size: 1.6rem;
 
-    --primary: #0a253b;
-    --primary-light: #0a253bfa;
+    --primary: #122c41;
+    --primary-light: #122c41fa;
 
     --accent: #1fc1c3;
     --accent-light: #62d4d5;
 
-    --white: #eee; //#ddd
-    --white-light: #eee;
-    --white-lighter: #fff;
-    --white-dim: #ccc;
+    --white: #eee;
+    --white-light: #fff;
+    --white-dim: #ddd;
 
     --black: #222;
     --black-light: #333;
@@ -44,11 +43,11 @@ html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
 
-    @inclugde respond(tab-land) {
+    @include respond(tab-land) {
         font-size: 56.25%; //1rem = 9px; 9px/16px = 56.25%
     }
 
-    @includge respond(tab-port) {
+    @include respond(tab-port) {
         font-size: 50%; //1rem = 8px; 8px/16px = 50%
     }
 
