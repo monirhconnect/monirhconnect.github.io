@@ -144,7 +144,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     gap: 10rem;
-    margin: 6rem 11.5rem 5.5rem; }
+    margin: 3rem 11.5rem 2.5rem; }
     @media (max-width: 1200px) {
       .footer__general-area {
         gap: 6rem; } }
@@ -156,6 +156,7 @@ body {
     flex: 3;
     position: relative; }
   .footer__office-item-box {
+    font-size: 1.2rem;
     padding: .15rem 0;
     margin-left: 3.1rem;
     position: relative; }
@@ -168,8 +169,7 @@ body {
     padding-bottom: -1rem;
     border-bottom: 1px solid currentColor; }
   .footer__whatsapp {
-    color: var(--white-dim);
-    font-size: 1.2rem; }
+    color: var(--white-dim); }
   .footer__text {
     color: var(--white-dim); }
   .footer__link:link, .footer__link:visited {
@@ -182,11 +182,10 @@ body {
   .footer__heading-secondary {
     color: var(--white); }
   .footer__legal-area {
-    font-size: 1.2rem;
     text-align: center;
     border-top: 1px solid rgba(85, 85, 85, 0.8);
     border-top: 1px solid #555;
-    padding: 2rem 0 3rem; }
+    padding: 1rem 0 1.5rem; }
   .footer__copyright {
     color: var(--white-dim); }
 
@@ -255,7 +254,6 @@ body {
     list-style: none;
     display: block;
     width: 22rem;
-    font-size: 1.4rem;
     background-color: var(--white);
     position: absolute;
     top: 4rem;
@@ -287,7 +285,7 @@ body {
       top: -.55rem;
       left: 0; }
   .header__nav-item-sub:not(:last-child) {
-    border-bottom: 1px solid var(--grey-border); }
+    border-bottom: 1px solid #eee; }
     @media (max-width: 1200px) {
       .header__nav-item-sub:not(:last-child) {
         border-bottom: none; } }
@@ -301,7 +299,7 @@ body {
     width: 100%;
     color: #222;
     text-decoration: none;
-    padding: 1rem 1.5rem; }
+    padding: .6rem 1.5rem; }
     @media (max-width: 1200px) {
       .header__nav-link-sub:link, .header__nav-link-sub:visited {
         color: var(--white); } }
@@ -392,16 +390,15 @@ svg[class*="icon"] {
   left: -3rem; }
 
 .section-hero {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   font-weight: 600;
   color: var(--white);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/img/hero.jpg);
   background-image: linear-gradient(120deg, rgba(10, 37, 59, 0.3), #0a253b), url(/img/hero.jpg);
   background-size: cover;
-  background-position: top;
+  background-position: center center;
   background-repeat: no-repeat;
-  margin-top: -5rem;
   position: relative; }
   @media (max-width: 1200px) {
     .section-hero {
@@ -409,7 +406,7 @@ svg[class*="icon"] {
       margin-top: 0; } }
   .section-hero__text-box {
     position: absolute;
-    top: 32vh;
+    top: 24vh;
     left: 9.77rem; }
     @media (max-width: 1200px) {
       .section-hero__text-box {

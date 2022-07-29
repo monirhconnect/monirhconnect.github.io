@@ -1,5 +1,5 @@
 .section-hero {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     font-weight: 600;
     color: var(--white);
@@ -14,9 +14,8 @@
         rgba(10, 37, 59, 1)
         ), url(/img/hero.jpg);
     background-size: cover;
-    background-position: top;
+    background-position: center center;
     background-repeat: no-repeat;
-    margin-top: -5rem;
     position: relative;
 
     @include respond(tab-land) {
@@ -26,7 +25,7 @@
 
     &__text-box {
         position: absolute;
-        top: 32vh;
+        top: 24vh;
         left: 9.77rem;
 
         @include respond(tab-land) {

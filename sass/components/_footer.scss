@@ -12,7 +12,7 @@
         justify-content: center;
         align-items: flex-start;
         gap: 10rem;
-        margin: 6rem 11.5rem 5.5rem;
+        margin: 3rem 11.5rem 2.5rem;
 
         @include respond(tab-land) {
             gap: 6rem;
@@ -33,6 +33,7 @@
     }
 
     &__office-item-box {
+        font-size: 1.2rem;
         padding: .15rem 0;
         margin-left: 3.1rem;
         position: relative;
@@ -52,7 +53,6 @@
 
     &__whatsapp {
         color: var(--white-dim);
-        font-size: 1.2rem;
     }
 
     &__text {
@@ -79,11 +79,10 @@
     }
 
     &__legal-area {
-        font-size: 1.2rem;
         text-align: center;
         border-top: 1px solid rgba(85, 85, 85, 0.8);
         border-top: 1px solid #555;
-        padding: 2rem 0 3rem;
+        padding: 1rem 0 1.5rem;
     }
 
     &__copyright {

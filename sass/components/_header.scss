@@ -95,7 +95,6 @@
         list-style: none;
         display: block;
         width: 22rem;
-        font-size: 1.4rem;
         background-color: var(--white);
         position: absolute;
         top: 4rem;
@@ -133,7 +132,7 @@
 
     &__nav-item-sub {
         &:not(:last-child) {
-            border-bottom: 1px solid var(--grey-border);
+            border-bottom: 1px solid #eee;
 
             @include respond(tab-land) {
                 border-bottom: none;
@@ -156,7 +155,7 @@
             width: 100%;
             color: #222;
             text-decoration: none;
-            padding: 1rem 1.5rem;
+            padding: .6rem 1.5rem;
 
             @include respond(tab-land) {
                 color: var(--white);
