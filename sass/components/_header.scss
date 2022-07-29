@@ -1,20 +1,16 @@
 .header {
     height: 5rem;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .3);
     background-color: var(--white);
     padding-inline: 10rem;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
-
-    @include respond(tab-land) {
-        position: fixed;
-        width: 100%;
-    }
 
     &__logo-container {
         margin-right: auto;
