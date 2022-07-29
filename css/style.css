@@ -16,7 +16,6 @@ Big desktop       > big-desktop
     transform: translateY(0.12rem); } }
 
 :root {
-  --default-font-size: 1.6rem;
   --primary: #122c41;
   --primary-light: #122c41fa;
   --accent: #1fc1c3;
