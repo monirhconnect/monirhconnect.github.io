@@ -1,20 +1,68 @@
 .footer {
     font-size: 1.4rem;
-    color: var(--white-dim);
-    background-color: var(--primary);
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
+    color: var(--white-dimmer);
+    background-color: var(--white-dimmer);
 
-    &__general-area {
+    &__container {
+        background-color: var(--primary);
+
+        &--general {
+            margin-bottom: 1px;
+        }
+
+        &--legal {
+            text-align: center;
+        }
+    }
+
+    &__general-content {
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        gap: 10rem;
-        margin: 3rem 11.5rem 2.5rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        
+        @include breakpoint-up(medium) {
+            width: 690px;
+            padding-inline: .5rem;
+            margin-inline: auto;
+        }
 
-        @include respond(tab-land) {
+        @include breakpoint-up(large) {
+            width: 880px;
             gap: 6rem;
+            padding-inline: 1rem;
+            margin-inline: auto;
+        }
+
+        @include breakpoint-up(xlarge) {
+            width: 1170px;
+            gap: 10rem;
+            padding-inline: 1.5rem;
+            margin-inline: auto;
+        }
+    }
+
+    &__legal-content {
+        padding-top: 1.5rem;
+        padding-bottom: 3rem;
+
+        @include breakpoint-up(medium) {
+            width: 690px;
+            padding-inline: .5rem;
+            margin-inline: auto;
+        }
+
+        @include breakpoint-up(large) {
+            width: 880px;
+            padding-inline: 1rem;
+            margin-inline: auto;
+        }
+
+        @include breakpoint-up(xlarge) {
+            width: 1170px;
+            padding-inline: 1.5rem;
+            margin-inline: auto;
         }
     }
     
@@ -39,7 +87,7 @@
     }
 
     &__phone {
-        color: var(--white-dim);
+        color: var(--white-dimmer);
         margin-bottom: -.7rem;
     }
 
@@ -51,11 +99,11 @@
     }
 
     &__whatsapp {
-        color: var(--white-dim);
+        color: var(--white-dimmer);
     }
 
     &__text {
-        color: var(--white-dim);
+        color: var(--white-dimmer);
     }
 
     &__link {
@@ -63,13 +111,13 @@
         &:visited {
             display: block;
             width: fit-content;
-            color: var(--white-dim);
-            text-decoration: none;
+            color: var(--white-dimmer);
         }
         
         &:hover,
         &:active {
-            text-decoration: underline;
+            text-decoration: none;
+            color: var(--white-dim);
         }
     }
 
@@ -77,14 +125,7 @@
         color: var(--white);
     }
 
-    &__legal-area {
-        text-align: center;
-        border-top: 1px solid rgba(85, 85, 85, 0.8);
-        border-top: 1px solid #555;
-        padding: 1rem 0 1.5rem;
-    }
-
     &__copyright {
-        color: var(--white-dim);
+        color: var(--white-dimmer);
     }
 }

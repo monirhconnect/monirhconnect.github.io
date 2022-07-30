@@ -1,15 +1,5 @@
 /*
-0 - 700px       : Phone
-700px - 900px   : Tablet portrait
-900px - 1200px  : Tablet landscape
-[1200px - 1800px] is where our normal styles apply
-1800px +        : Big desktop
-
-$breakpoint argument choices:
-Phone             > phone
-Tablet portrait   > tab-port
-Tablet landscape  > tab-land
-Big desktop       > big-desktop
+Breakpoints: 700px, 900px,  1200px
 */
 @keyframes moveUpDown {
   50% {
@@ -21,7 +11,8 @@ Big desktop       > big-desktop
   --accent: #1fc1c3;
   --accent-light: #62d4d5;
   --white: #fff;
-  --white-dim: #ddd;
+  --white-dim: #eee;
+  --white-dimmer: #ccc;
   --black: #222;
   --black-light: #333;
   --grey: #777;
@@ -41,25 +32,16 @@ Big desktop       > big-desktop
 *::after {
   box-sizing: inherit; }
 
+::selection {
+  color: #222;
+  background-color: var(--accent); }
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
   overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent; }
-  @media (max-width: 1200px) {
-    html {
-      font-size: 56.25%; } }
-  @media (max-width: 900px) {
-    html {
-      font-size: 50%; } }
-  @media (min-width: 1800px) {
-    html {
-      font-size: 75%; } }
-
-body {
-  max-width: 180rem;
-  margin: 0 auto; }
 
 body {
   font-family: 'open sans', sans-serif;
@@ -83,11 +65,11 @@ body {
 
 .u-line-break {
   display: block; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199.98px) {
     .u-line-break {
       display: inline; } }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199.98px) {
   .u-line-break-tab-land {
     display: block; } }
 
@@ -116,7 +98,7 @@ body {
   transition: all var(--transition-duration); }
 
 .btn-link:hover, .btn-link:active {
-  background-color: var(--white-light);
+  background-color: var(--white-dim);
   box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.15); }
 
 .btn-link--overview:link, .btn-link--overview:visited {
@@ -133,20 +115,55 @@ body {
 
 .footer {
   font-size: 1.4rem;
-  color: var(--white-dim);
-  background-color: var(--primary);
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto; }
-  .footer__general-area {
+  color: var(--white-dimmer);
+  background-color: var(--white-dimmer); }
+  .footer__container {
+    background-color: var(--primary); }
+    .footer__container--general {
+      margin-bottom: 1px; }
+    .footer__container--legal {
+      text-align: center; }
+  .footer__general-content {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 10rem;
-    margin: 3rem 11.5rem 2.5rem; }
-    @media (max-width: 1200px) {
-      .footer__general-area {
-        gap: 6rem; } }
+    padding-top: 4rem;
+    padding-bottom: 4rem; }
+    @media (min-width: 700px) {
+      .footer__general-content {
+        width: 690px;
+        padding-inline: .5rem;
+        margin-inline: auto; } }
+    @media (min-width: 900px) {
+      .footer__general-content {
+        width: 880px;
+        gap: 6rem;
+        padding-inline: 1rem;
+        margin-inline: auto; } }
+    @media (min-width: 1200px) {
+      .footer__general-content {
+        width: 1170px;
+        gap: 10rem;
+        padding-inline: 1.5rem;
+        margin-inline: auto; } }
+  .footer__legal-content {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem; }
+    @media (min-width: 700px) {
+      .footer__legal-content {
+        width: 690px;
+        padding-inline: .5rem;
+        margin-inline: auto; } }
+    @media (min-width: 900px) {
+      .footer__legal-content {
+        width: 880px;
+        padding-inline: 1rem;
+        margin-inline: auto; } }
+    @media (min-width: 1200px) {
+      .footer__legal-content {
+        width: 1170px;
+        padding-inline: 1.5rem;
+        margin-inline: auto; } }
   .footer__office {
     flex: 1; }
   .footer__link-box {
@@ -160,7 +177,7 @@ body {
     margin-left: 3.1rem;
     position: relative; }
   .footer__phone {
-    color: var(--white-dim);
+    color: var(--white-dimmer);
     margin-bottom: -.7rem; }
   .footer__email {
     color: var(--accent);
@@ -168,40 +185,40 @@ body {
     padding-bottom: -1rem;
     border-bottom: 1px solid currentColor; }
   .footer__whatsapp {
-    color: var(--white-dim); }
+    color: var(--white-dimmer); }
   .footer__text {
-    color: var(--white-dim); }
+    color: var(--white-dimmer); }
   .footer__link:link, .footer__link:visited {
     display: block;
     width: fit-content;
-    color: var(--white-dim);
-    text-decoration: none; }
+    color: var(--white-dimmer); }
   .footer__link:hover, .footer__link:active {
-    text-decoration: underline; }
+    text-decoration: none;
+    color: var(--white-dim); }
   .footer__heading-secondary {
     color: var(--white); }
-  .footer__legal-area {
-    text-align: center;
-    border-top: 1px solid rgba(85, 85, 85, 0.8);
-    border-top: 1px solid #555;
-    padding: 1rem 0 1.5rem; }
   .footer__copyright {
-    color: var(--white-dim); }
+    color: var(--white-dimmer); }
 
 .header {
-  height: 5rem;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.3);
   background-color: var(--white);
-  padding-inline: 10rem;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10; }
-  .header__logo-container {
+  .header__container {
+    height: 5rem; }
+    @media (min-width: 1200px) {
+      .header__container {
+        width: 1170px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-inline: 1.5rem;
+        margin-inline: auto; } }
+  .header__logo-box {
     margin-right: auto;
     background-color: var(--primary);
     color: var(--white);
@@ -221,7 +238,7 @@ body {
       position: relative;
       padding: .1rem 1.5rem .1rem .3rem;
       transition: all var(--transition-duration); }
-      @media (max-width: 1200px) {
+      @media (max-width: 1199.98px) {
         .header__nav-item--button {
           position: static; } }
       .header__nav-item--button:hover {
@@ -264,7 +281,7 @@ body {
     visibility: hidden;
     transform: translateY(-1.4rem);
     transition: all .3s, visibility .2s; }
-    @media (max-width: 1200px) {
+    @media (max-width: 1199.98px) {
       .header__nav-list-sub {
         width: 99%;
         display: block;
@@ -285,12 +302,12 @@ body {
       left: 0; }
   .header__nav-item-sub:not(:last-child) {
     border-bottom: 1px solid #eee; }
-    @media (max-width: 1200px) {
+    @media (max-width: 1199.98px) {
       .header__nav-item-sub:not(:last-child) {
         border-bottom: none; } }
   .header__nav-item-sub:last-child {
     margin-bottom: 1rem; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199.98px) {
     .header__nav-item-sub {
       transform: translateX(45%); } }
   .header__nav-link-sub:link, .header__nav-link-sub:visited {
@@ -299,14 +316,14 @@ body {
     color: #222;
     text-decoration: none;
     padding: .6rem 1.5rem; }
-    @media (max-width: 1200px) {
+    @media (max-width: 1199.98px) {
       .header__nav-link-sub:link, .header__nav-link-sub:visited {
         color: var(--white); } }
   .header__nav-link-sub:hover, .header__nav-link-sub:active {
     color: var(--white);
     background-color: var(--primary-light);
     background-color: #122c41; }
-    @media (max-width: 1200px) {
+    @media (max-width: 1199.98px) {
       .header__nav-link-sub:hover, .header__nav-link-sub:active {
         background-color: transparent; } }
 
@@ -372,42 +389,42 @@ svg[class*="icon"] {
   height: 1.3rem;
   fill: #fff;
   position: absolute;
-  top: .8rem;
+  top: .6rem;
   left: -3rem; }
 
 .icon__email {
   height: 1.5rem;
   fill: #fff;
   position: absolute;
-  top: .9rem;
+  top: 1.2rem;
   left: -3rem; }
 
 .icon__whatsapp {
   height: 1.5rem;
   position: absolute;
-  top: .3rem;
+  top: .2rem;
   left: -3rem; }
 
 .section-hero {
-  height: 90vh;
+  height: 95vh;
   width: 100%;
   font-weight: 600;
   color: var(--white);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/img/hero.jpg);
-  background-image: linear-gradient(120deg, rgba(10, 37, 59, 0.3), #0a253b), url(/img/hero.jpg);
+  background-image: linear-gradient(120deg, #122c41, #122c41), url(/img/hero.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   position: relative; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199.98px) {
     .section-hero {
       height: 80vh;
       margin-top: 0; } }
   .section-hero__text-box {
     position: absolute;
-    top: 24vh;
+    top: 28vh;
     left: 9.77rem; }
-    @media (max-width: 1200px) {
+    @media (max-width: 1199.98px) {
       .section-hero__text-box {
         top: 53%;
         left: 50%;

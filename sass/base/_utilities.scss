@@ -6,13 +6,13 @@
 .u-line-break {
     display: block;
 
-    @include respond(tab-land) {
+    @include breakpoint-down(large) {
         display: inline;
     }
 }
 
 .u-line-break-tab-land {
-    @include respond(tab-land) {
+    @include breakpoint-down(large) {
         display: block;
     }
 }

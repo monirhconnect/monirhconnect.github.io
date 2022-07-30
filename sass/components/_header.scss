@@ -1,23 +1,31 @@
 .header {
-    height: 5rem;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .3);
     background-color: var(--white);
-    padding-inline: 10rem;
+    box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .3);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
 
-    &__logo-container {
+    &__container {
+        height: 5rem;
+
+        @include breakpoint-up(xlarge) {
+            width: 1170px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-inline: 1.5rem;
+            margin-inline: auto;
+        }
+    }
+
+    &__logo-box {
         margin-right: auto;
         background-color: var(--primary);
         color: var(--white);
         padding: 2rem 2rem;
-    }
+    } 
 
     &__logo-text {
         font-size: 1.8rem;
@@ -42,7 +50,7 @@
             padding: .1rem 1.5rem .1rem .3rem;
             transition: all var(--transition-duration);
 
-            @include respond(tab-land) {
+            @include breakpoint-down(large) {
                 position: static;
             }
 
@@ -107,7 +115,7 @@
         transform: translateY(-1.4rem);
         transition: all .3s, visibility .2s;
 
-        @include respond(tab-land) {
+        @include breakpoint-down(large) {
             width: 99%;
             display: block;
             margin-right: .5rem;
@@ -134,7 +142,7 @@
         &:not(:last-child) {
             border-bottom: 1px solid #eee;
 
-            @include respond(tab-land) {
+            @include breakpoint-down(large) {
                 border-bottom: none;
             }
         }
@@ -143,7 +151,7 @@
             margin-bottom: 1rem;
         }
 
-        @include respond(tab-land) {
+        @include breakpoint-down(large) {
             transform: translateX(45%);
         }
     }
@@ -157,7 +165,7 @@
             text-decoration: none;
             padding: .6rem 1.5rem;
 
-            @include respond(tab-land) {
+            @include breakpoint-down(large) {
                 color: var(--white);
             }
         }
@@ -168,7 +176,7 @@
             background-color: var(--primary-light);
             background-color: #122c41;
 
-            @include respond(tab-land) {
+            @include breakpoint-down(large) {
                 background-color: transparent;
             }
         }

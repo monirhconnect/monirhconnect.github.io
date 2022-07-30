@@ -6,7 +6,8 @@
     --accent-light: #62d4d5;
 
     --white: #fff;
-    --white-dim: #ddd;
+    --white-dim: #eee;
+    --white-dimmer: #ccc;
 
     --black: #222;
     --black-light: #333;
@@ -33,27 +34,15 @@
     box-sizing: inherit;
 }
 
+::selection {
+    color: #222;
+    background-color: var(--accent);
+}
+
 html {
     font-size: 62.5%; //1rem = 10px; 10px/16px = 62.5%
     box-sizing: border-box;
     overflow-x: hidden;
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
-
-    @include respond(tab-land) {
-        font-size: 56.25%; //1rem = 9px; 9px/16px = 56.25%
-    }
-
-    @include respond(tab-port) {
-        font-size: 50%; //1rem = 8px; 8px/16px = 50%
-    }
-
-    @include respond(big-desktop) {
-        font-size: 75%; //1rem = 12px; 12px/16px = 75%
-    }
-}
-
-body {
-    max-width: 180rem;
-    margin: 0 auto;
 }
