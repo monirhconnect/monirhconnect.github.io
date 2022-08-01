@@ -16,7 +16,6 @@
     &__container {
         background-color: transparent;
         padding-inline: 1.5rem;
-        border-bottom-right-radius: 2rem;
 
         @include breakpoint-down(large) {
             min-height: 7rem;

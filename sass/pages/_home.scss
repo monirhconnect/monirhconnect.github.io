@@ -1,5 +1,5 @@
 .section-hero {
-    height: 95vh;
+    height: 100vh;
     width: 100%;
     font-weight: 600;
     color: var(--white);
@@ -8,7 +8,7 @@
         rgba(0, 0, 0, .8),
         rgba(0, 0, 0, .8)
     ), url(/img/hero.jpg);
-    background-image: linear-gradient(
+    backgrfound-image: linear-gradient(
         120deg,
         rgba(18, 44, 65, 1),
         rgba(18, 44, 65, 1)
@@ -18,27 +18,30 @@
     background-repeat: no-repeat;
     position: relative;
 
-    @include breakpoint-down(large) {
-        height: 80vh;
-        margin-top: 0;
+    @include breakpoint-up(xlarge) {
+        height: 95vh;
     }
 
     &__text-box {
-        position: absolute;
-        top: 28vh;
-        left: 9.77rem;
-
-        @include breakpoint-down(large) {
-            top: 53%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
+        padding-top: 40%;
+        text-align: center;
+        margin-lefft: 2rem;
+        
+        @include breakpoint-up(xlarge) {
+            position: absolute;
+            top: 28vh;
+            left: 9.77rem;
+            text-align: left;
         }
     }
 
     &__site-title {
-        font-size: 4.8rem;
-        line-height: 1.4;
+        font-size: 3rem;
+
+        @include breakpoint-up(xlarge) {
+            font-size: 4.8rem;
+            line-height: 1.4;
+        }
     }
 
     &__secondary-title {
