@@ -1,15 +1,15 @@
 // MEDIA QUERY MANAGER
 /*
-Breakpoints: 700px, 900px,  1200px
+Breakpoints: 600px, 800px,  1200px
 */
 
 @mixin breakpoint-up($size) {
     @if $size == medium {
-        @media (min-width: 700px ) { @content };
+        @media (min-width: 600px ) { @content };
     }
 
     @if $size == large {
-        @media (min-width: 900px ) { @content };
+        @media (min-width: 800px ) { @content };
     }
 
     @if $size == xlarge {
@@ -19,8 +19,12 @@ Breakpoints: 700px, 900px,  1200px
 
 
 @mixin breakpoint-down($size) {
+    @if $size == small {
+        @media (max-width: 599.98px ) { @content };
+    }
+
     @if $size == medium {
-        @media (max-width: 899.98px ) { @content };
+        @media (max-width: 799.98px ) { @content };
     }
 
     @if $size == large {

@@ -33,7 +33,6 @@ Hamburger.addEventListener('click', function() {
     if (display === 'none') {
         headerNav.style.display = 'flex';
         headerNav.style.flexDirection = 'column';
-        headerContainer.style.boxShadow = '0 .5rem 1rem rgba(0, 0, 0, .2)';
     } else {
         headerNav.style.display = 'none';
     }

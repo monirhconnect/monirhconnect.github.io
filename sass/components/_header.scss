@@ -5,7 +5,6 @@
     top: 0;
     left: 0;
     z-index: 10;
-    border-botftom: 1px solid var(--grey);
 
     @include breakpoint-up(xlarge) {
         width: 100%;
@@ -16,11 +15,12 @@
     &__container {
         background-color: transparent;
         padding-inline: 1.5rem;
-
+        
         @include breakpoint-down(large) {
-            min-height: 7rem;
+            min-height: 6rem;
             overflow-x: hidden;
             overflow-y: scroll;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
         }
         
         @include breakpoint-up(xlarge) {
@@ -40,7 +40,7 @@
         display: flex;
         align-items: center;
         gap: 1.5rem;
-        padding-top: 2rem;
+        padding-top: 1.5rem;
 
         @include breakpoint-up(xlarge) {
             margin-right: auto;
