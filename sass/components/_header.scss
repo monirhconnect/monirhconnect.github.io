@@ -1,16 +1,32 @@
 .header {
     width: 100%;
-    background-color: var(--white);
-    box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .3);
+    background-color: var(--primary);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
+    border-botftom: 1px solid var(--grey);
+
+    @include breakpoint-up(xlarge) {
+        width: 100%;
+        background-color: var(--white);
+        box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .3);
+    }
 
     &__container {
-        height: 5rem;
+        background-color: transparent;
+        padding-inline: 1.5rem;
+        border-bottom-right-radius: 2rem;
 
+        @include breakpoint-down(large) {
+            min-height: 7rem;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        
         @include breakpoint-up(xlarge) {
+            height: 5rem;
+            background-color: var(--white);
             width: 1170px;
             display: flex;
             justify-content: center;
@@ -21,20 +37,53 @@
     }
 
     &__logo-box {
-        margin-right: auto;
-        background-color: var(--primary);
-        color: var(--white);
-        padding: 2rem 2rem;
-    } 
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding-top: 2rem;
+
+        @include breakpoint-up(xlarge) {
+            margin-right: auto;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 2rem 2rem;
+        }
+    }
 
     &__logo-text {
         font-size: 1.8rem;
+        margin-right: auto;
+    }
+
+    &__logo-link {
+        text-decoration: none;
+        color: var(--white);
+        padding: 1rem;
+    }
+
+    &__cta {
+        @include breakpoint-up(xlarge) {
+            display: none;
+        }
+    }
+
+    &__nav {
+        display: none;
+
+        @include breakpoint-up(xlarge) {
+            display: block;
+
+        }
     }
 
     &__nav-list {
         list-style: none;
-        display: flex;
-        align-items: center;
+
+        @include breakpoint-up(xlarge) {
+            display: flex;
+            align-items: center;
+        }
     }
 
     &__nav-item {
@@ -58,17 +107,28 @@
                 padding: 1.2rem 1.5rem 1.2rem .3rem;
             }
         }
+
+        &--cta {
+            display: none;
+
+            @include breakpoint-up(xlarge) {
+                display: block;
+            }
+        }
     }
 
     &__nav-link {
         &:link,
         &:visited {
             color: var(--white);
-            color: #252525;
             text-decoration: none;
             padding-inline: 5px;
             transition: all var(--transition-duration);
             font-weight: 900;
+
+            @include breakpoint-up(xlarge) {
+                color: #252525;
+            }
         }
 
         &:hover,
@@ -79,7 +139,6 @@
 
     &__nav-button {
         color: var(--white);
-        color: #252525;
         background-color: transparent;
         font-family: inherit;
         font-size: inherit;
@@ -87,6 +146,10 @@
         border: none;
         cursor: pointer;
         margin-inline: .2rem -1rem;
+
+        @include breakpoint-up(xlarge) {
+            color: #252525;
+        }
 
         &:hover,
         &:focus,
@@ -100,30 +163,27 @@
     }
 
     &__nav-list-sub {
-        list-style: none;
-        display: block;
-        width: 22rem;
-        background-color: var(--white);
-        position: absolute;
-        top: 4rem;
-        right: -2.5rem;
-        padding-top: .8rem;
-        border-radius: 1px;
-        box-shadow: 0 1rem 3rem rgba(0,0,0,.2);
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-1.4rem);
-        transition: all .3s, visibility .2s;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        text-align: left;
+        background-color: rgba(0, 0, 0, .1);
 
-        @include breakpoint-down(large) {
-            width: 99%;
+        @include breakpoint-up(xlarge) {
+            list-style: none;
             display: block;
-            margin-right: .5rem;
-            top: 3.6rem;
-            right: 0;
-            background-color: var(--primary);
-            box-shadow: none;
-            transition: all .3s, visibility .2s, width 0s;
+            width: 22rem;
+            background-color: var(--white);
+            position: absolute;
+            top: 4rem;
+            right: -2.5rem;
+            padding-top: .8rem;
+            border-radius: 1px;
+            box-shadow: 0 1rem 3rem rgba(0,0,0,.2);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-1.4rem);
+            transition: all .3s, visibility .2s;
         }
 
         &::before {

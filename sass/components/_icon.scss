@@ -3,14 +3,29 @@ svg[class*="icon"] {
 }
 
 .icon {
-    &__home {
-        height: 1.5rem;
-        width: 1.5rem;
-        fill: currentColor;
-        margin-top: .6rem;
+    &__hamburger {
+        height: 3rem;
+        width: 3rem;
+        fill: #fff;
 
-        &:hover {
-            fill: var(--white-light);
+        @include breakpoint-up(xlarge) {
+            display: none;
+        }
+    }
+
+    &__home {
+        fill: currentColor;
+        display: none;
+
+        @include breakpoint-up(xlarge) {
+            height: 1.5rem;
+            width: 1.5rem;
+            fill: currentColor;
+            margin-top: .6rem;
+    
+            &:hover {
+                fill: var(--white-light);
+            }
         }
     }
 
@@ -29,7 +44,7 @@ svg[class*="icon"] {
     &__arrow2 {
         height: 1.7rem;
         position: absolute;
-        top: 1.28rem;
+        top: 1.35rem;
         right: 1.3rem;
         animation: moveUpDown 2s 2s infinite backwards;
     }
@@ -41,23 +56,39 @@ svg[class*="icon"] {
         margin-right: 1rem;
 
         &--facebook {
-            fill: #3b5998;
-            margin-bottom: .3rem;
+            fill: currentColor;
+
+            @include breakpoint-up(xlarge) {
+                fill: #3b5998;
+                margin-bottom: .3rem;
+            }
         }
 
         &--instagram {
-            fill: #ea065f;
-            margin-bottom: .3rem;
+            fill: currentColor;
+
+            @include breakpoint-up(xlarge) {
+                fill: #ea065f;
+                margin-bottom: .3rem;
+            }
         }
 
         &--spotify {
-            fill: #1db954;
-            margin-bottom: .1rem;
+            fill: currentColor;
+
+            @include breakpoint-up(xlarge) {
+                fill: #1db954;
+                margin-bottom: .1rem;
+            }
         }
 
         &--soundcloud {
-            fill: #ff8800;
-            margin-bottom: .2rem;
+            fill: currentColor;
+
+            @include breakpoint-up(xlarge) {
+                fill: #ff8800;
+                margin-bottom: .2rem;
+            }
         }
     }
 
