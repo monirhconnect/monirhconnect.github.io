@@ -2,19 +2,26 @@
     &:link,
     &:visited {
         display: inline-block;
-        color: var(--black-light);
-        background-color: var(--white);
+        color: var(--white);
+        background-color: rgba(0, 0, 0, .2);
         border-radius: 100px;
         text-decoration: none;
-        padding: .5rem 1rem .5rem 1.7rem;
         margin-left: .2rem;
         transition: all var(--transition-duration);
+
+        @include breakpoint-up(xlarge) {
+            color: var(--black-light);
+            background-color: var(--white);
+        }
     }
     
     &:hover,
     &:active {
-        background-color: var(--white-dim);
         box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .15);
+        
+        @include breakpoint-up(xlarge) {
+            background-color: var(--white-dim);
+        }
     }
 
     &--overview {
