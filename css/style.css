@@ -205,7 +205,7 @@ body {
     color: var(--white-dimmer); }
 
 .header {
-  width: 100%;
+  width: 97%;
   background-color: var(--primary);
   position: fixed;
   top: 0;
