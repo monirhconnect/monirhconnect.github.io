@@ -25,15 +25,21 @@ navListSub.addEventListener('mouseleave', navClose);
 const Hamburger = document.querySelector('.icon__hamburger');
 
 Hamburger.addEventListener('click', function() {
-    const headerNav = document.querySelector('.header__nav');
+    const headerNav = document.querySelector('.header__nav-area');
     const style = getComputedStyle(headerNav);
-    const display = style.display;
-    const headerContainer = document.querySelector('.header__container');
+    const height = style.height;
+    const main = document.querySelector('.main');
+    const footer = document.querySelector('.footer');
 
-    if (display === 'none') {
-        headerNav.style.display = 'flex';
-        headerNav.style.flexDirection = 'column';
+    if (height === '0px') {
+        headerNav.style.height = 'fit-content';
+        headerNav.style.visibility = 'visible';
+        headerNav.style.opacity = 1;
+        //main.style.filter = 'blur(1px) brightness(.8) grayscale(.8)';
     } else {
-        headerNav.style.display = 'none';
+        headerNav.style.height = '0px';
+        headerNav.style.visibility = 'hidden';
+        headerNav.style.opacity = 0;
+        //main.style.filter = '';
     }
 });

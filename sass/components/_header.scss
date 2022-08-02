@@ -5,6 +5,8 @@
     top: 0;
     left: 0;
     z-index: 10;
+    border-botttom: 1px solid #ccc;
+    transition: all .5s;
 
     @include breakpoint-up(xlarge) {
         width: 100%;
@@ -15,18 +17,20 @@
     &__container {
         background-color: transparent;
         padding-inline: 1.5rem;
+        transition: all .5s;
+        width: 100%;
         
         @include breakpoint-down(large) {
             min-height: 6rem;
-            overflow-x: hidden;
-            overflow-y: scroll;
+            overflow: hidden;
             box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+            transition: all .5s;
         }
         
         @include breakpoint-up(xlarge) {
             height: 5rem;
-            background-color: var(--white);
             width: 1170px;
+            background-color: var(--white);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -35,30 +39,30 @@
         }
     }
 
-    &__logo-box {
+    &__logo-area {
         background-color: transparent;
         display: flex;
         align-items: center;
         gap: 1.5rem;
-        padding-top: 1.5rem;
+        padding-top: .5rem;
 
         @include breakpoint-up(xlarge) {
-            margin-right: auto;
-            background-color: var(--primary);
             color: var(--white);
+            background-color: var(--primary);
             padding: 2rem 2rem;
+            margin-right: auto;
         }
     }
 
     &__logo-text {
         font-size: 1.8rem;
-        margin-right: auto;
     }
-
+    
     &__logo-link {
         text-decoration: none;
         color: var(--white);
         padding: 1rem;
+        margin-right: auto;
     }
 
     &__cta {
@@ -67,17 +71,20 @@
         }
     }
 
-    &__nav {
-        display: none;
+    &__nav-area {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1s;
 
         @include breakpoint-up(xlarge) {
             display: block;
-
         }
     }
 
     &__nav-list {
         list-style: none;
+        margin-top: 2rem;
 
         @include breakpoint-up(xlarge) {
             display: flex;
@@ -86,7 +93,6 @@
     }
 
     &__nav-item {
-        margin-inline: 2rem;
         cursor: pointer;
 
         &:last-child {
@@ -162,11 +168,11 @@
     }
 
     &__nav-list-sub {
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        text-align: left;
-        background-color: rgba(0, 0, 0, .1);
+
+        @include breakpoint-down(small) {
+            width: 90%;
+            margin-left: -35%;
+        }
 
         @include breakpoint-up(xlarge) {
             list-style: none;
@@ -198,12 +204,16 @@
     }
 
     &__nav-item-sub {
+        width: 100%;
+        margin-top: 2rem;
+        background-color: rgba(0, 0, 0, .2);
+
+        @include breakpoint-down(small) {
+            margin-lheft: -66%;
+        }
+
         &:not(:last-child) {
             border-bottom: 1px solid #eee;
-
-            @include breakpoint-down(large) {
-                border-bottom: none;
-            }
         }
 
         &:last-child {
