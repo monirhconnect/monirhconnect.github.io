@@ -43,9 +43,17 @@ html {
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent; }
 
+.hand-drawing-arrow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 100%;
+  color: #fff;
+  background-color: #fff; }
+
 body {
   font-family: 'open sans', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.7;
   color: var(--black);
@@ -111,7 +119,11 @@ body {
 
 .btn-link--overview:link, .btn-link--overview:visited {
   padding: 1rem 3.8rem 1rem 2.5rem;
-  position: relative; }
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9; }
 
 .btn-link--cta:link, .btn-link--cta:visited {
   font-weight: 700;
@@ -214,8 +226,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
-  transigtion: all .5s; }
+  z-index: 10; }
   @media (min-width: 1200px) {
     .header {
       width: 100%;
@@ -224,13 +235,12 @@ body {
   .header__container {
     width: 100%;
     padding-inline: 1.5rem;
-    transithion: all .5s;
     background-color: transparent;
-    backgrouhnd-image: linear-gradient(180deg, var(--primary) 0%, var(--primary) 20%, #16354e 20%, #16354e 100%); }
+    background-image: linear-gradient(180deg, var(--primary) 6.1rem, #cf8700 6.1rem, #cf8700 92%, #af7200 92%, #af7200 100%); }
     @media (max-width: 1199.98px) {
       .header__container {
         height: 6rem;
-        overflow: hidden;
+        overflow-y: hidden;
         box-shafdow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
         transitiohn: all .5s ease-in-out;
         border-bottom: 0px solid #ce8600; }
@@ -258,7 +268,8 @@ body {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    padding-top: .5rem; }
+    padding-top: .5rem;
+    position: relative; }
     @media (min-width: 1200px) {
       .header__logo-area {
         color: var(--white);
@@ -281,10 +292,9 @@ body {
     .header__cta {
       display: none; } }
   .header__nav-area {
-    height: 0;
-    visibility: hidden;
-    opacity: 0;
-    transitjion: all 1s; }
+    margin-top: 8rem;
+    margin-right: .5rem;
+    text-align: right; }
     @media (min-width: 1200px) {
       .header__nav-area {
         display: block; } }
@@ -296,10 +306,12 @@ body {
         display: flex;
         align-items: center; } }
   .header__nav-item {
-    cursor: pointer; }
+    cursor: pointer;
+    margin-left: 1rem; }
     .header__nav-item:last-child {
       margin-right: 0; }
     .header__nav-item--button {
+      font-size: 5rem;
       position: relative;
       padding: .1rem 1.5rem .1rem .3rem;
       transition: all var(--transition-duration); }
@@ -314,6 +326,7 @@ body {
         .header__nav-item--cta {
           display: block; } }
   .header__nav-link:link, .header__nav-link:visited {
+    font-size: 4.8rem;
     color: var(--white);
     text-decoration: none;
     padding-inline: 5px;
@@ -340,35 +353,39 @@ body {
       background-color: transparent; }
   .header__nav-item--button:hover > .header__nav-button {
     color: #444; }
-  @media (max-width: 599.98px) {
-    .header__nav-list-sub {
-      width: 90%;
-      margin-left: -35%; } }
-  @media (min-width: 1200px) {
-    .header__nav-list-sub {
-      list-style: none;
+  .header__nav-list-sub {
+    list-style: none;
+    visibility: hidden;
+    display: none; }
+    @media (max-width: 599.98px) {
+      .header__nav-list-sub {
+        width: 90%;
+        margin-left: -35%; } }
+    @media (min-width: 1200px) {
+      .header__nav-list-sub {
+        list-style: none;
+        display: block;
+        width: 22rem;
+        background-color: var(--white);
+        position: absolute;
+        top: 4rem;
+        right: -2.5rem;
+        padding-top: .8rem;
+        border-radius: 1px;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-1.4rem);
+        transition: all .3s, visibility .2s; } }
+    .header__nav-list-sub::before {
+      content: "";
       display: block;
-      width: 22rem;
-      background-color: var(--white);
+      height: .4rem;
+      width: inherit;
+      background-color: transparent;
       position: absolute;
-      top: 4rem;
-      right: -2.5rem;
-      padding-top: .8rem;
-      border-radius: 1px;
-      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-1.4rem);
-      transition: all .3s, visibility .2s; } }
-  .header__nav-list-sub::before {
-    content: "";
-    display: block;
-    height: .4rem;
-    width: inherit;
-    background-color: transparent;
-    position: absolute;
-    top: -.55rem;
-    left: 0; }
+      top: -.55rem;
+      left: 0; }
   .header__nav-item-sub {
     width: 100%;
     margin-top: 2rem;
@@ -400,6 +417,14 @@ body {
       .header__nav-link-sub:hover, .header__nav-link-sub:active {
         background-color: transparent; } }
 
+.mobile-copyright {
+  color: #fff;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.6rem; }
+
 svg[class*="icon"] {
   transition: all var(--transition-duration); }
 
@@ -413,6 +438,8 @@ svg[class*="icon"] {
       display: none; } }
 
 .icon__home {
+  height: 3rem;
+  width: 3rem;
   fill: currentColor;
   display: none; }
   @media (min-width: 1200px) {
@@ -426,6 +453,7 @@ svg[class*="icon"] {
         fill: var(--white-light); } }
 
 .icon__arrow1 {
+  display: none;
   height: 1rem;
   width: 1rem;
   fill: currentColor;
@@ -436,6 +464,7 @@ svg[class*="icon"] {
   fill: currentColor; }
 
 .icon__arrow2 {
+  display: none;
   height: 1.7rem;
   position: absolute;
   top: 1.35rem;
@@ -504,17 +533,22 @@ svg[class*="icon"] {
   top: .2rem;
   left: -3rem; }
 
+.icon--text {
+  max-width: 30%;
+  position: absolute;
+  left: 45%;
+  bottom: -30%;
+  z-index: 8;
+  animation: upDownImg 3s infinite ease-in-out; }
+
+@keyframes upDownImg {
+  50% {
+    transform: translateY(0.4rem); } }
+
 .section-hero {
   width: 100%;
   font-weight: 600;
   color: var(--white);
-  /*
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, .8),
-        rgba(0, 0, 0, .8)
-    ), url(/img/hero.jpg);
-    */
   background-image: linear-gradient(120deg, #122c41, #122c41);
   background-size: cover;
   background-position: center center;
@@ -560,5 +594,4 @@ svg[class*="icon"] {
 
 .main {
   height: 250vh;
-  background-color: var(--white);
-  transition: filter .25s; }
+  background-color: var(--white); }

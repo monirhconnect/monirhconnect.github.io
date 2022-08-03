@@ -1,3 +1,4 @@
+/*
 const navBtn = document.querySelector('.header__nav-item--button');
 const navListSub = document.querySelector('.header__nav-list-sub');
 
@@ -19,29 +20,54 @@ function navClose() {
 }
 navBtn.addEventListener('mouseleave', navClose);
 navListSub.addEventListener('mouseleave', navClose);
-
+*/
 
 
 const Hamburger = document.querySelector('.icon__hamburger');
 
 Hamburger.addEventListener('click', function() {
-    const headerNav = document.querySelector('.header__nav-area');
-    const header = document.querySelector('.header');
     const headerContainer = document.querySelector('.header__container');
     const style = getComputedStyle(headerContainer);
     const height = style.height;
-    const main = document.querySelector('.main');
-    const footer = document.querySelector('.footer');
+    const headerNav = document.querySelector('.header__nav-area');
 
     if (height === '60px') {
-        headerContainer.style.height = '75vh';
+        headerContainer.style.height = '100vh';
         headerContainer.style.transition = 'all .25s ease-out';
-        headerContainer.style.borderBottom = '60vh solid #ce8600';
-        main.style.filter = 'brightness(.85)';
+        headerContainer.style.boyrderBottom = '2px solid #ce8600';
+        headerNav.style.backgoroundColor = '#ce8600';
+        headerContainer.style.backgoroundColor = '';
+        headerContainer.style.overflowY = 'scroll';
     } else {
         headerContainer.style.height = '60px';
         headerContainer.style.transition = 'all .2s ease-out';
-        headerContainer.style.borderBottom = '0 solid #ce8600';
-        main.style.filter = 'none';
+        headerContainer.style.bordeurBottom = '0 solid #ce8600';
+        headerContainer.style.backgoroundColor = '';
+        headerContainer.style.overflowY = 'hidden';
+
     }
 });
+
+
+/*
+const Hamburger = document.querySelector('.icon__hamburger');
+
+Hamburger.addEventListener('click', function() {
+    const header = document.querySelector('.header');
+    const main = document.querySelector('.main');
+    const style = getComputedStyle(header);
+    const transform = style.transform;
+
+    if (transform === 'none') {
+        header.style.transform = 'translateX(-83%)';
+        header.style.transition = 'transform .3s ease-out';
+        main.style.transform = 'translateX(-83%)';
+        main.style.transition = 'transform .3s ease-out';
+    } else {
+        header.style.transform = 'none';
+        header.style.transition = 'transform .3s ease-out';
+        main.style.transform = 'none';
+        main.style.transition = 'transform .3s ease-out';
+    }
+});
+*/

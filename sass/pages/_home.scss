@@ -1,23 +1,12 @@
 .section-hero {
-    
     width: 100%;
     font-weight: 600;
     color: var(--white);
-
-    /*
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, .8),
-        rgba(0, 0, 0, .8)
-    ), url(/img/hero.jpg);
-    */
-
     background-image: linear-gradient(
         120deg,
         rgba(18, 44, 65, 1),
         rgba(18, 44, 65, 1)
         );
-
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -79,5 +68,4 @@
 .main {
     height: 250vh;
     background-color: var(--white);
-    transition: filter .25s;
 }
