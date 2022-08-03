@@ -5,26 +5,38 @@
     top: 0;
     left: 0;
     z-index: 10;
-    border-botttom: 1px solid #ccc;
-    transition: all .5s;
+    transigtion: all .5s;
 
     @include breakpoint-up(xlarge) {
         width: 100%;
         background-color: var(--white);
-        box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .3);
+        box-shafdow: 0 .2rem 1rem rgba(0, 0, 0, .3);
     }
 
     &__container {
-        background-color: transparent;
-        padding-inline: 1.5rem;
-        transition: all .5s;
         width: 100%;
+        padding-inline: 1.5rem;
+        transithion: all .5s;
+        background-color: transparent;
+        backgrouhnd-image: linear-gradient(180deg, var(--primary) 0%, var(--primary) 20%, #16354e 20%, #16354e 100%);
         
         @include breakpoint-down(large) {
-            min-height: 6rem;
+            height: 6rem;
             overflow: hidden;
-            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-            transition: all .5s;
+            box-shafdow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+            transitiohn: all .5s ease-in-out;
+            border-bottom: 0px solid #ce8600;
+
+            &::after {
+                content: "";
+                display: block;
+                height: 1px;
+                width: inherit;
+                background-color: #ffa600;
+                position: absolute;
+                top: 5.9rem;
+                left: 0;
+            }
         }
         
         @include breakpoint-up(xlarge) {
@@ -56,12 +68,19 @@
 
     &__logo-text {
         font-size: 1.8rem;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        .styled {
+            color: var(--accent);
+            color: #e69500;
+        }
     }
     
     &__logo-link {
         text-decoration: none;
         color: var(--white);
-        padding: 1rem;
+        padding: 1rem 1rem 1rem .5rem;
         margin-right: auto;
     }
 
@@ -75,7 +94,7 @@
         height: 0;
         visibility: hidden;
         opacity: 0;
-        transition: all 1s;
+        transitjion: all 1s;
 
         @include breakpoint-up(xlarge) {
             display: block;

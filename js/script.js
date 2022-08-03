@@ -26,20 +26,22 @@ const Hamburger = document.querySelector('.icon__hamburger');
 
 Hamburger.addEventListener('click', function() {
     const headerNav = document.querySelector('.header__nav-area');
-    const style = getComputedStyle(headerNav);
+    const header = document.querySelector('.header');
+    const headerContainer = document.querySelector('.header__container');
+    const style = getComputedStyle(headerContainer);
     const height = style.height;
     const main = document.querySelector('.main');
     const footer = document.querySelector('.footer');
 
-    if (height === '0px') {
-        headerNav.style.height = 'fit-content';
-        headerNav.style.visibility = 'visible';
-        headerNav.style.opacity = 1;
-        //main.style.filter = 'blur(1px) brightness(.8) grayscale(.8)';
+    if (height === '60px') {
+        headerContainer.style.height = '75vh';
+        headerContainer.style.transition = 'all .25s ease-out';
+        headerContainer.style.borderBottom = '60vh solid #ce8600';
+        main.style.filter = 'brightness(.85)';
     } else {
-        headerNav.style.height = '0px';
-        headerNav.style.visibility = 'hidden';
-        headerNav.style.opacity = 0;
-        //main.style.filter = '';
+        headerContainer.style.height = '60px';
+        headerContainer.style.transition = 'all .2s ease-out';
+        headerContainer.style.borderBottom = '0 solid #ce8600';
+        main.style.filter = 'none';
     }
 });
