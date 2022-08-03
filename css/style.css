@@ -617,27 +617,27 @@ svg[class*="icon"] {
         left: 9.77rem;
         text-align: left;
         transform: none; } }
-  .section-hero__site-title {
+  .section-hero__primary-title {
     font-size: 3rem;
     font-weight: 600;
     line-height: 1.7; }
-    .section-hero__site-title .styled {
+    .section-hero__primary-title .styled {
       color: var(--accent);
       color: #e69500;
       font-size: 4rem;
       font-weight: 500;
       line-height: 1; }
       @media (min-width: 600px) {
-        .section-hero__site-title .styled {
+        .section-hero__primary-title .styled {
           font-size: 3.4rem; } }
     @media (min-width: 600px) {
-      .section-hero__site-title {
+      .section-hero__primary-title {
         font-size: 2.4rem;
         font-weight: 600;
         line-height: 1.6; } }
   .section-hero__secondary-title {
     font-weight: 400;
-    padding-inline: 6.5rem; }
+    padding-inline: 5rem; }
     @media (min-width: 600px) {
       .section-hero__secondary-title {
         line-height: 1.6;
