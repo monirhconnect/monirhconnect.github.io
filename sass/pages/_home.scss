@@ -13,7 +13,7 @@
     position: relative;
 
     @include breakpoint-down(small) {
-        height: 80vh;
+        height: 91vh;
     }
 
     @include breakpoint-up(medium) {
@@ -26,7 +26,7 @@
 
     &__text-box {
         position: absolute;
-        top: 24%;
+        top: 25%;
         text-align: center;
 
         @include breakpoint-down(small) {
@@ -48,20 +48,26 @@
 
     &__site-title {
         font-size: 3rem;
+        line-height: 1.8;
+        font-weight: 600;
 
         .styled {
             color: var(--accent);
             color: #e69500;
+            font-size: 4rem;
+            font-weight: 500;
+            line-height: 1;
         }
 
         @include breakpoint-up(medium) {
             font-size: 4.8rem;
-            line-height: 1.4;
+            font-weight: 900;
         }
     }
 
     &__secondary-title {
         margin-left: .3rem;
+        font-weight: 400;
     }
 }
 

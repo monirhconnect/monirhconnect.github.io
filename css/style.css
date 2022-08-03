@@ -236,7 +236,7 @@ body {
     width: 100%;
     padding-inline: 1.5rem;
     background-color: transparent;
-    background-image: linear-gradient(180deg, var(--primary) 6.1rem, #cf8700 6.1rem, #cf8700 92%, #af7200 92%, #af7200 100%); }
+    background-image: linear-gradient(180deg, var(--primary) 6.1rem, #cf8700 6.1rem, #cf8700 91vh, #af7200 91vh, #af7200 100vh); }
     @media (max-width: 1199.98px) {
       .header__container {
         height: 6rem;
@@ -292,7 +292,7 @@ body {
     .header__cta {
       display: none; } }
   .header__nav-area {
-    margin-top: 8rem;
+    margin-top: 12vh;
     margin-right: .5rem;
     text-align: right; }
     @media (min-width: 1200px) {
@@ -423,7 +423,8 @@ body {
   bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  display: none; }
 
 svg[class*="icon"] {
   transition: all var(--transition-duration); }
@@ -556,7 +557,7 @@ svg[class*="icon"] {
   position: relative; }
   @media (max-width: 599.98px) {
     .section-hero {
-      height: 80vh; } }
+      height: 91vh; } }
   @media (min-width: 600px) {
     .section-hero {
       height: 100vh; } }
@@ -565,7 +566,7 @@ svg[class*="icon"] {
       height: 95vh; } }
   .section-hero__text-box {
     position: absolute;
-    top: 24%;
+    top: 25%;
     text-align: center; }
     @media (max-width: 599.98px) {
       .section-hero__text-box {
@@ -581,16 +582,22 @@ svg[class*="icon"] {
         text-align: left;
         transform: none; } }
   .section-hero__site-title {
-    font-size: 3rem; }
+    font-size: 3rem;
+    line-height: 1.8;
+    font-weight: 600; }
     .section-hero__site-title .styled {
       color: var(--accent);
-      color: #e69500; }
+      color: #e69500;
+      font-size: 4rem;
+      font-weight: 500;
+      line-height: 1; }
     @media (min-width: 600px) {
       .section-hero__site-title {
         font-size: 4.8rem;
-        line-height: 1.4; } }
+        font-weight: 900; } }
   .section-hero__secondary-title {
-    margin-left: .3rem; }
+    margin-left: .3rem;
+    font-weight: 400; }
 
 .main {
   height: 250vh;

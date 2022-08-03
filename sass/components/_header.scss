@@ -20,9 +20,9 @@
             180deg, 
             var(--primary) 6.1rem, 
             #cf8700 6.1rem, 
-            #cf8700 92%,
-            #af7200 92%,
-            #af7200 100%);
+            #cf8700 91vh,
+            #af7200 91vh,
+            #af7200 100vh);
 
         @include breakpoint-down(large) {
             height: 6rem;
@@ -96,7 +96,7 @@
     }
 
     &__nav-area {
-        margin-top: 8rem;
+        margin-top: 12vh;
         margin-right: .5rem;
         text-align: right;
 
@@ -288,4 +288,6 @@
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.6rem;
+
+    display: none;
 }
