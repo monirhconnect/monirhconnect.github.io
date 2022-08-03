@@ -15,19 +15,29 @@
     &__container {
         width: 100%;
         padding-inline: 1.5rem;
+        margin-inline: auto;
         background-color: transparent;
         background-image: linear-gradient(
             180deg, 
-            var(--primary) 6.1rem, 
+            transparent 6.1rem, 
             #cf8700 6.1rem, 
             #cf8700 91vh,
             #af7200 91vh,
             #af7200 100vh);
 
+        @include breakpoint-up(medium) {
+            background-image: linear-gradient(
+            180deg, 
+            transparent 6rem, 
+            #cf8700 6rem, 
+            #cf8700 90vh,
+            #af7200 90vh,
+            #af7200 100vh);
+        }
+            
         @include breakpoint-down(large) {
             height: 6rem;
             overflow-y: hidden;
-            box-shafdow: 0 .5rem 1rem rgba(0, 0, 0, .2);
             transitiohn: all .5s ease-in-out;
             border-bottom: 0px solid #ce8600;
 
@@ -96,7 +106,7 @@
     }
 
     &__nav-area {
-        margin-top: 12vh;
+        margin-top: 13vh;
         margin-right: .5rem;
         text-align: right;
 
@@ -109,6 +119,12 @@
         list-style: none;
         margin-top: 2rem;
 
+        @include breakpoint-up(medium) {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
         @include breakpoint-up(xlarge) {
             display: flex;
             align-items: center;
@@ -118,16 +134,22 @@
     &__nav-item {
         cursor: pointer;
         margin-left: 1rem;
+        
 
         &:last-child {
             margin-right: 0;
         }
 
         &--button {
-            font-size: 5rem;
+            font-size: 4.9rem;
             position: relative;
             padding: .1rem 1.5rem .1rem .3rem;
             transition: all var(--transition-duration);
+
+            @include breakpoint-up(medium) {
+                font-size: 3.1rem;
+                padding: .1rem 2.5rem .1rem 2rem;
+            }
 
             @include breakpoint-down(large) {
                 position: static;
@@ -153,9 +175,14 @@
             font-size: 4.8rem;
             color: var(--white);
             text-decoration: none;
-            padding-inline: 5px;
+            padding-inline: .5rem;
             transition: all var(--transition-duration);
             font-weight: 900;
+
+            @include breakpoint-up(medium) {
+                font-size: 3rem;
+                padding-inline: 1rem;
+            }
 
             @include breakpoint-up(xlarge) {
                 color: #252525;
@@ -287,7 +314,7 @@
     bottom: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 
     display: none;
 }

@@ -47,12 +47,36 @@ svg[class*="icon"] {
     }
 
     &__arrow2 {
-        display: none;
-        height: 1.7rem;
+        height: 2.5rem;
+        width: 2.5rem;
         position: absolute;
-        top: 1.35rem;
-        right: 1.3rem;
+        top: 1rem;
+        right: 24%;
         animation: moveUpDown 2s 2s infinite backwards;
+
+        @include breakpoint-up(medium) {
+            display: block;
+        }
+
+        @include breakpoint-up(xlarge) {
+            height: 1.7rem;
+            top: 1.35rem;
+            right: 1.3rem;
+        }
+    }
+
+    &__drawing-arrow-down {
+        max-width: 30%;
+        position: absolute;
+        left: 48%;
+        bottom: -35%;
+        z-index: 8;
+        animation: upDownImg 3s infinite ease-in-out;
+        display: none;
+
+        @include breakpoint-up(medium) {
+            display: none;
+        }
     }
 
     &__social {
@@ -134,16 +158,25 @@ svg[class*="icon"] {
         top: .2rem;
         left: -3rem;
     }
+
+    &__arrow-box {
+        height: 4rem;
+        width: 5rem;
+        background-color: rgba(0,0,0,.15);
+        margin-inline: auto;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
-.icon--text {
-    max-width: 30%;
-    position: absolute;
-    left: 45%;
-    bottom: -30%;
-    z-index: 8;
-    animation: upDownImg 3s infinite ease-in-out;
-}
+
+
+
+
 @keyframes upDownImg {
     50% {
         transform: translateY(.4rem);

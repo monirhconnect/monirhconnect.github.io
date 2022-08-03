@@ -6,12 +6,12 @@
         background-color: rgba(0, 0, 0, .2);
         border-radius: 100px;
         text-decoration: none;
-        margin-left: .2rem;
         transition: all var(--transition-duration);
-
+        
         @include breakpoint-up(xlarge) {
             color: var(--black-light);
             background-color: var(--white);
+            margin-left: .2rem;
         }
     }
     
@@ -27,11 +27,11 @@
     &--overview {
         &:link,
         &:visited {
-            padding: 1rem 3.8rem 1rem 2.5rem;
-            position: absolute;
-            width: 100%;
-            left: 50%;
-            transform: translateX(-50%);
+            padding: 1rem 2.5rem 1.2rem 2.5rem;
+            positiyon: absolute;
+            widhth: 100%;
+            lefft: 50%;
+            trafnsform: translateX(-50%);
             z-index: 9;
         }
     }
