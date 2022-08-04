@@ -284,7 +284,7 @@ body {
     text-transform: uppercase; }
     .header__logo-text .styled {
       color: var(--accent);
-      color: #e69500; }
+      cotlor: #e69500; }
   .header__logo-link {
     text-decoration: none;
     color: var(--white);
@@ -632,7 +632,7 @@ svg[class*="icon"] {
         line-height: 1.6; } }
     .section-hero__primary-title .styled {
       color: var(--accent);
-      color: #e69500;
+      coltor: #e69500;
       font-size: 4rem;
       font-weight: 500;
       line-height: 1; }
