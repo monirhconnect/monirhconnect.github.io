@@ -106,9 +106,10 @@
     }
 
     &__nav-area {
-        margin-top: 13vh;
+        margin-top: 36vh;
         margin-right: .5rem;
         text-align: right;
+        transform: translateY(-35%);
 
         @include breakpoint-up(xlarge) {
             display: block;

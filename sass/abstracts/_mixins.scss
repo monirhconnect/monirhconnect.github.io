@@ -1,33 +1,31 @@
 // MEDIA QUERY MANAGER
-/*
-Breakpoints: 600px, 800px,  1200px
-*/
+
+// Breakpoints: 600px, 800px,  1200px
 
 @mixin breakpoint-up($size) {
     @if $size == medium {
-        @media (min-width: 600px ) { @content };
+        @media (min-width: 37.5em) { @content }; // 600px; (600px/16px = 37.5em)
     }
 
     @if $size == large {
-        @media (min-width: 800px ) { @content };
+        @media (min-width: 50em) { @content }; // 800px; (800px/16px = 50em)
     }
 
     @if $size == xlarge {
-        @media (min-width: 1200px ) { @content };
+        @media (min-width: 75em) { @content }; // 1200px; (1200px/16px = 75em)
     }
 }
 
-
 @mixin breakpoint-down($size) {
     @if $size == small {
-        @media (max-width: 599.98px ) { @content };
+        @media (max-width: 37.49875em) { @content }; // 599.98px; (599.98px/16px = 37.49875em)
     }
 
     @if $size == medium {
-        @media (max-width: 799.98px ) { @content };
+        @media (max-width: 49.99875em) { @content }; // 799.98px; (799.98px/16px = 49.99875em)
     }
 
     @if $size == large {
-        @media (max-width: 1199.98px ) { @content };
+        @media (max-width: 74.99875em) { @content }; // 1199.98px; (1199.98px/16px = 74.99875em)
     }
 }

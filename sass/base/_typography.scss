@@ -2,6 +2,8 @@ body {
     font-family: 'open sans', sans-serif;
     font-size: 1.8rem;
     font-weight: 400;
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: antialiased;
     line-height: 1.7;
     color: var(--black);
     background-color: var(--white);
