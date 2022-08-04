@@ -33,18 +33,12 @@ Hamburger.addEventListener('click', function() {
 
     if (height === '60px') {
         headerContainer.style.height = '100vh';
-        headerContainer.style.transition = 'all .25s ease-out';
-        headerContainer.style.boyrderBottom = '2px solid #ce8600';
-        headerNav.style.backgoroundColor = '#ce8600';
-        headerContainer.style.backgoroundColor = '';
+        headerContainer.style.transition = 'all .2s ease-out';
         headerContainer.style.overflowY = 'scroll';
     } else {
         headerContainer.style.height = '60px';
         headerContainer.style.transition = 'all .2s ease-out';
-        headerContainer.style.bordeurBottom = '0 solid #ce8600';
-        headerContainer.style.backgoroundColor = '';
         headerContainer.style.overflowY = 'hidden';
-
     }
 });
 

@@ -229,14 +229,14 @@ body {
   @media (min-width: 75em) {
     .header {
       width: 100%;
-      background-color: var(--white);
-      box-shafdow: 0 0.2rem 1rem rgba(0, 0, 0, 0.3); } }
+      background-color: var(--white); } }
   .header__container {
     width: 100%;
     padding-inline: 1.5rem;
     margin-inline: auto;
     background-color: transparent;
-    background-image: linear-gradient(180deg, transparent 6.1rem, #cf8700 6.1rem, #cf8700 91vh, #af7200 91vh, #af7200 100vh); }
+    backgfround-image: linear-gradient(180deg, transparent 6rem, #cf8700 6rem, #cf8700 91vh, #af7200 91vh, #af7200 100vh);
+    background-image: linear-gradient(180deg, transparent 6rem, #efefef 6rem, #efefef 91vh, #ddd 91vh, #ddd 100vh); }
     @media (min-width: 37.5em) {
       .header__container {
         background-image: linear-gradient(180deg, transparent 6rem, #cf8700 6rem, #cf8700 90vh, #af7200 90vh, #af7200 100vh); } }
@@ -251,7 +251,7 @@ body {
           display: block;
           height: 1px;
           width: inherit;
-          background-color: #ffa600;
+          background-color: #ccc;
           position: absolute;
           top: 5.9rem;
           left: 0; } }
@@ -340,10 +340,11 @@ body {
   .header__nav-link:link, .header__nav-link:visited {
     font-size: 4.8rem;
     color: var(--white);
+    color: #353535;
     text-decoration: none;
+    font-weight: 600;
     padding-inline: .5rem;
-    transition: all var(--transition-duration);
-    font-weight: 900; }
+    transition: all var(--transition-duration); }
     @media (min-width: 37.5em) {
       .header__nav-link:link, .header__nav-link:visited {
         font-size: 3rem;
@@ -352,16 +353,17 @@ body {
       .header__nav-link:link, .header__nav-link:visited {
         color: #252525; } }
   .header__nav-link:hover, .header__nav-link:active {
-    color: #444; }
+    color: #333; }
   .header__nav-button {
     color: var(--white);
+    color: #353535;
     background-color: transparent;
     font-family: inherit;
     font-size: inherit;
-    font-weight: 900;
+    font-weight: 600;
     border: none;
-    cursor: pointer;
-    margin-inline: .2rem -1rem; }
+    margin-inline: .2rem -1rem;
+    cursor: pointer; }
     @media (min-width: 75em) {
       .header__nav-button {
         color: #252525; } }
@@ -587,7 +589,7 @@ svg[class*="icon"] {
     transform: translateY(0.4rem); } }
 
 .section-hero {
-  height: 91vh;
+  height: 85vh;
   width: 100%;
   font-weight: 600;
   color: var(--white);
@@ -648,4 +650,4 @@ svg[class*="icon"] {
 .main {
   height: 250vh;
   background-color: var(--white);
-  background-color: #af7200; }
+  backgrdound-color: #af7200; }

@@ -9,7 +9,7 @@
     @include breakpoint-up(xlarge) {
         width: 100%;
         background-color: var(--white);
-        box-shafdow: 0 .2rem 1rem rgba(0, 0, 0, .3);
+        //box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .3);
     }
 
     &__container {
@@ -17,13 +17,21 @@
         padding-inline: 1.5rem;
         margin-inline: auto;
         background-color: transparent;
-        background-image: linear-gradient(
+        backgfround-image: linear-gradient(
             180deg, 
-            transparent 6.1rem, 
-            #cf8700 6.1rem, 
+            transparent 6rem, 
+            #cf8700 6rem, 
             #cf8700 91vh,
             #af7200 91vh,
             #af7200 100vh);
+
+        background-image: linear-gradient(
+            180deg, 
+            transparent 6rem, 
+            #efefef 6rem, 
+            #efefef 91vh,
+            #ddd 91vh,
+            #ddd 100vh);
 
         @include breakpoint-up(medium) {
             background-image: linear-gradient(
@@ -46,7 +54,7 @@
                 display: block;
                 height: 1px;
                 width: inherit;
-                background-color: #ffa600;
+                background-color: #ccc;
                 position: absolute;
                 top: 5.9rem;
                 left: 0;
@@ -175,10 +183,11 @@
         &:visited {
             font-size: 4.8rem;
             color: var(--white);
+            color: #353535;
             text-decoration: none;
+            font-weight: 600;
             padding-inline: .5rem;
             transition: all var(--transition-duration);
-            font-weight: 900;
 
             @include breakpoint-up(medium) {
                 font-size: 3rem;
@@ -192,19 +201,20 @@
 
         &:hover,
         &:active {
-            color: #444;
+            color: #333;
         }
     }
 
     &__nav-button {
         color: var(--white);
+        color: #353535;
         background-color: transparent;
         font-family: inherit;
         font-size: inherit;
-        font-weight: 900;
+        font-weight: 600;
         border: none;
-        cursor: pointer;
         margin-inline: .2rem -1rem;
+        cursor: pointer;
 
         @include breakpoint-up(xlarge) {
             color: #252525;
