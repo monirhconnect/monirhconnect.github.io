@@ -9,56 +9,45 @@
     @include breakpoint-up(xlarge) {
         width: 100%;
         background-color: var(--white);
-        //box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .3);
+        //box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .25);
     }
 
     &__container {
+        height: 6rem;
         width: 100%;
-        padding-inline: 1.5rem;
-        margin-inline: auto;
         background-color: transparent;
-        backgfround-image: linear-gradient(
-            180deg, 
-            transparent 6rem, 
-            #cf8700 6rem, 
-            #cf8700 91vh,
-            #af7200 91vh,
-            #af7200 100vh);
-
         background-image: linear-gradient(
             180deg, 
-            transparent 6rem, 
-            #efefef 6rem, 
-            #efefef 91vh,
-            #ddd 91vh,
-            #ddd 100vh);
+            var(--primary) 0%, 
+            var(--primary) 6rem,
+            rgba(0, 0, 0, .15) 6rem, 
+            rgba(0, 0, 0, .15) 91vh,
+            #eee 91vh,
+            #eee 100vh
+        );
+        padding-inline: 1.5rem;
+        margin-inline: auto;
+        //transition: all .5s ease-in-out;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: inherit;
+            background-color: #ccc;
+            position: absolute;
+            top: 5.9rem;
+            left: 0;
+        }
 
         @include breakpoint-up(medium) {
             background-image: linear-gradient(
             180deg, 
             transparent 6rem, 
-            #cf8700 6rem, 
-            #cf8700 90vh,
-            #af7200 90vh,
-            #af7200 100vh);
-        }
-            
-        @include breakpoint-down(large) {
-            height: 6rem;
-            overflow-y: hidden;
-            transitiohn: all .5s ease-in-out;
-            border-bottom: 0px solid #ce8600;
-
-            &::after {
-                content: "";
-                display: block;
-                height: 1px;
-                width: inherit;
-                background-color: #ccc;
-                position: absolute;
-                top: 5.9rem;
-                left: 0;
-            }
+            #efefef 6rem, 
+            #efefef 90vh,
+            #ddd 90vh,
+            #ddd 100vh);
         }
         
         @include breakpoint-up(xlarge) {
@@ -95,7 +84,6 @@
         text-transform: uppercase;
 
         .styled {
-            color: var(--accent);
             color: #e69500;
         }
     }
@@ -107,16 +95,13 @@
         margin-right: auto;
     }
 
-    &__cta {
-        @include breakpoint-up(xlarge) {
-            display: none;
-        }
-    }
-
     &__nav-area {
-        margin-top: 30vh;
-        margin-right: .5rem;
-        text-align: right;
+        visibility: hidden;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        margin-top: 28vh;
         transform: translateY(-35%);
 
         @include breakpoint-up(xlarge) {
@@ -126,7 +111,16 @@
 
     &__nav-list {
         list-style: none;
-        margin-top: 2rem;
+
+        &:nth-child(1) {
+            margin-right: auto;
+            margin-top: 8rem;
+        }
+
+        &:nth-child(2) {
+            padding-inline: .5rem;
+            margin-top: -5.15rem;
+        }
 
         @include breakpoint-up(medium) {
             display: flex;
@@ -141,49 +135,13 @@
     }
 
     &__nav-item {
-        cursor: pointer;
-        margin-left: 1rem;
-        
-
-        &:last-child {
-            margin-right: 0;
-        }
-
-        &--button {
-            font-size: 4.9rem;
-            position: relative;
-            padding: .1rem 1.5rem .1rem .3rem;
-            transition: all var(--transition-duration);
-
-            @include breakpoint-up(medium) {
-                font-size: 3.1rem;
-                padding: .1rem 2.5rem .1rem 2rem;
-            }
-
-            @include breakpoint-down(large) {
-                position: static;
-            }
-
-            &:hover {
-                padding: 1.2rem 1.5rem 1.2rem .3rem;
-            }
-        }
-
-        &--cta {
-            display: none;
-
-            @include breakpoint-up(xlarge) {
-                display: block;
-            }
-        }
     }
 
     &__nav-link {
         &:link,
         &:visited {
-            font-size: 4.8rem;
-            color: var(--white);
-            color: #353535;
+            font-size: 3rem; //4.8rem
+            color: #ddd;
             text-decoration: none;
             font-weight: 600;
             padding-inline: .5rem;
@@ -192,10 +150,6 @@
             @include breakpoint-up(medium) {
                 font-size: 3rem;
                 padding-inline: 1rem;
-            }
-
-            @include breakpoint-up(xlarge) {
-                color: #252525;
             }
         }
 
@@ -206,39 +160,51 @@
     }
 
     &__nav-button {
-        color: var(--white);
-        color: #353535;
-        background-color: transparent;
-        font-family: inherit;
-        font-size: inherit;
-        font-weight: 600;
-        border: none;
-        margin-inline: .2rem -1rem;
-        cursor: pointer;
-
-        @include breakpoint-up(xlarge) {
-            color: #252525;
-        }
-
-        &:hover,
-        &:focus,
-        &:active {
-            background-color: transparent;
-        }
-    }
-
-    &__nav-item--button:hover > &__nav-button {
-        color: #444;
-    }
-
-    &__nav-list-sub {
-        list-style: none;
-        visibility: hidden;
         display: none;
 
-        @include breakpoint-down(small) {
-            width: 90%;
-            margin-left: -35%;
+        @include breakpoint-up(xlarge) {
+            display: block;
+            color: #252525;
+            background-color: transparent;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: 600;
+            border: none;
+            margin-inline: .2rem -1rem;
+            cursor: pointer;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: transparent;
+            }
+            /*
+            &__nav-item--button:hover > &__nav-button {
+                color: #444;
+            }
+            */
+        }
+    }
+
+    &__nav-label {
+        color: #ddd;
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+
+
+
+    &__nav-list-sub {
+        height: 28rem;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        gap: 2rem;
+
+        &::-webkit-scrollbar {
+            width: 10px;
         }
 
         @include breakpoint-up(xlarge) {
@@ -258,7 +224,7 @@
             transition: all .3s, visibility .2s;
         }
 
-        &::before {
+        &::befofffre {
             content: "";
             display: block;
             height: .4rem;
@@ -271,55 +237,29 @@
     }
 
     &__nav-item-sub {
-        width: 100%;
-        margin-top: 2rem;
-        background-color: rgba(0, 0, 0, .2);
-
-        @include breakpoint-down(small) {
-            margin-lheft: -66%;
-        }
-
-        &:not(:last-child) {
-            border-bottom: 1px solid #eee;
-        }
-
-        &:last-child {
-            margin-bottom: 1rem;
-        }
-
-        @include breakpoint-down(large) {
-            transform: translateX(45%);
-        }
+        height: 12.2rem;
+        width: 12.2rem;
+        background-color: #efefef;
+        padding: 1rem;
+        border-radius: 20px;
     }
 
     &__nav-link-sub {
         &:link,
         &:visited {
-            display: inline-block;
-            width: 100%;
-            color: #222;
-            text-decoration: none;
-            padding: .6rem 1.5rem;
-
-            @include breakpoint-down(large) {
-                color: var(--white);
-            }
         }
 
         &:hover,
         &:active {
-            color: var(--white);
-            background-color: var(--primary-light);
-            background-color: #122c41;
-
-            @include breakpoint-down(large) {
-                background-color: transparent;
-            }
         }
+    }
+
+    &__nav-service-label {
+        display: none;
     }
 }
 
-.mobile-copyright {
+.mobile-copgyright {
     color: #fff;
     position: absolute;
     bottom: 1.5rem;

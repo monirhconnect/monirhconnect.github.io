@@ -34,24 +34,15 @@
     box-sizing: inherit;
 }
 
-::selection {
+*::selection {
     color: #222;
     background-color: var(--accent);
 }
 
 html {
-    font-size: 62.5%; //1rem = 10px; 10px/16px = 62.5%
+    font-size: 62.5%; //makes 1rem = 10px; 10px/16px = 62.5%
     box-sizing: border-box;
     overflow-x: hidden;
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
-}
-
-.hand-drawing-arrow {
-    position: absolute;
-    left: 0;
-    top: 0;
-    max-width: 100%;
-    color: #fff;
-    background-color: #fff;
 }

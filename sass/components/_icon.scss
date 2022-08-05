@@ -15,9 +15,6 @@ svg[class*="icon"] {
     }
 
     &__home {
-        height: 3rem;
-        width: 3rem;
-        fill: currentColor;
         display: none;
 
         @include breakpoint-up(xlarge) {
@@ -65,58 +62,47 @@ svg[class*="icon"] {
         }
     }
 
-    &__drawing-arrow-down {
-        max-width: 30%;
-        position: absolute;
-        left: 48%;
-        bottom: -35%;
-        z-index: 8;
-        animation: upDownImg 3s infinite ease-in-out;
-        display: none;
-
-        @include breakpoint-up(medium) {
-            display: none;
-        }
-    }
-
     &__social {
-        height: 1.3rem;
-        width: 1.3rem;
+        height: 10rem;
+        width: 10rem;
         vertical-align: middle;
-        margin-right: 1rem;
+        margin-inline: auto;
+
+        @include breakpoint-up(xlarge) {
+            height: 1.3rem;
+            width: 1.3rem;
+            vertical-align: middle;
+            margin-right: 1rem;
+        }
 
         &--facebook {
-            fill: currentColor;
+            fill: #3b5998;
 
             @include breakpoint-up(xlarge) {
-                fill: #3b5998;
                 margin-bottom: .3rem;
             }
         }
 
         &--instagram {
-            fill: currentColor;
+            fill: #ea065f;
 
             @include breakpoint-up(xlarge) {
-                fill: #ea065f;
                 margin-bottom: .3rem;
             }
         }
 
         &--spotify {
-            fill: currentColor;
+            fill: #1db954;
 
             @include breakpoint-up(xlarge) {
-                fill: #1db954;
                 margin-bottom: .1rem;
             }
         }
 
         &--soundcloud {
-            fill: currentColor;
+            fill: #ff8800;
 
             @include breakpoint-up(xlarge) {
-                fill: #ff8800;
                 margin-bottom: .2rem;
             }
         }

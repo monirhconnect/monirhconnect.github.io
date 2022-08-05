@@ -33,15 +33,24 @@ Hamburger.addEventListener('click', function() {
 
     if (height === '60px') {
         headerContainer.style.height = '100vh';
-        headerContainer.style.transition = 'all .2s ease-out';
-        headerContainer.style.overflowY = 'scroll';
+        headerContainer.style.transition = 'all .3s ease-out';
+        headerNav.style.visibility = 'visible';
+        headerNav.style.opacity = 1;
+        headerNav.style.transition = 'all .6s ease-out';
     } else {
         headerContainer.style.height = '60px';
-        headerContainer.style.transition = 'all .2s ease-out';
-        headerContainer.style.overflowY = 'hidden';
+        headerContainer.style.transition = 'all .25s ease-out';
+        headerNav.style.visibility = 'hidden';
+        headerNav.style.opacity = 0;
+        headerNav.style.transition = 'all .1s';
     }
 });
 
+window.onload = function() {
+    const txtBox = document.querySelector('.section-hero__text-box');
+    txtBox.style.opacity = 1;
+    txtBox.style.transition = 'opacity .8s ease-in';
+}
 
 /*
 const Hamburger = document.querySelector('.icon__hamburger');
