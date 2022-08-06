@@ -63,10 +63,14 @@ svg[class*="icon"] {
     }
 
     &__social {
-        height: 10rem;
-        width: 10rem;
-        vertical-align: middle;
+        display: block;
+        height: 1.8rem;
+        width: 1.8rem;
         margin-inline: auto;
+
+        &:hover {
+            fill: #999;
+        }
 
         @include breakpoint-up(xlarge) {
             height: 1.3rem;
@@ -107,11 +111,12 @@ svg[class*="icon"] {
             }
         }
     }
-
+    /*
     .header__nav-link-sub:hover:hover > &__social {
         fill: currentColor;
         transition: all var(--transition-duration-social);
     }
+    */
 
     &__map {
         height: 20rem;

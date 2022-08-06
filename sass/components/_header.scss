@@ -18,16 +18,24 @@
         background-color: transparent;
         background-image: linear-gradient(
             180deg, 
+<<<<<<< HEAD
             var(--primary) 0%, 
             var(--primary) 6rem,
-            rgba(0, 0, 0, .15) 6rem, 
-            rgba(0, 0, 0, .15) 91vh,
+            #ddd 6rem, 
+            #ddd 91vh,
             #eee 91vh,
             #eee 100vh
         );
         padding-inline: 1.5rem;
         margin-inline: auto;
         //transition: all .5s ease-in-out;
+=======
+            var(--primary) 6.1rem, 
+            #cf8700 6.1rem, 
+            #cf8700 92%,
+            #af7200 92%,
+            #af7200 100%);
+>>>>>>> parent of 443cbf3 (update revertable)
 
         &::after {
             content: "";
@@ -96,13 +104,16 @@
     }
 
     &__nav-area {
+<<<<<<< HEAD
         visibility: hidden;
         opacity: 0;
-        display: flex;
-        justify-content: center;
-        gap: 5rem;
-        margin-top: 28vh;
-        transform: translateY(-35%);
+        margin-top: 10vh;
+        transfgorm: translateY(-35%);
+=======
+        margin-top: 8rem;
+        margin-right: .5rem;
+        text-align: right;
+>>>>>>> parent of 443cbf3 (update revertable)
 
         @include breakpoint-up(xlarge) {
             display: block;
@@ -111,15 +122,33 @@
 
     &__nav-list {
         list-style: none;
+        display: flex;
+        gap: 1rem;
+        
 
         &:nth-child(1) {
-            margin-right: auto;
-            margin-top: 8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            margin-bottom: 2.8rem;
+            position: relative;
+
+            &::after {
+                content: "";
+                display: block;
+                height: 1px;
+                width: 27.1rem;
+                width: 30.4rem;
+                background-color: #6f6f6f;
+                position: absolute;
+                bottom: -.2rem;
+                margin-inline: auto;
+            }
         }
 
         &:nth-child(2) {
-            padding-inline: .5rem;
-            margin-top: -5.15rem;
+            margin-lefft: 4.5vw;
         }
 
         @include breakpoint-up(medium) {
@@ -135,21 +164,28 @@
     }
 
     &__nav-item {
+        
     }
 
     &__nav-link {
         &:link,
         &:visited {
-            font-size: 3rem; //4.8rem
-            color: #ddd;
+            font-size: 2.4rem; //4.8rem
+            font-weight: 500;
             text-decoration: none;
-            font-weight: 600;
-            padding-inline: .5rem;
+            color: #222;
+            background-ctolor: rgba(255, 255, 255, 0.3);
+            padding-inline: .8rem;
+            padding-bottom: .5rem;
             transition: all var(--transition-duration);
 
             @include breakpoint-up(medium) {
                 font-size: 3rem;
                 padding-inline: 1rem;
+            }
+
+            &.header__nav-link--home {
+                display: none;
             }
         }
 
@@ -187,24 +223,59 @@
     }
 
     &__nav-label {
-        color: #ddd;
-        font-size: 3rem;
-        font-weight: 600;
-        margin-bottom: 2rem;
+        color: #222;
+        background-cotlor:rgba(255, 255, 255, .3);
+        font-size: 2.4rem;
+        font-weight: 500;
+        margin-bottom: 0rem;
+        padding-inline: 1rem;
+        margin-lefft: -1.5rem;
+        display: inline-block;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 27.1rem;
+            width: 30.4rem;
+            background-color: #6f6f6f;
+            position: absolute;
+            bottom: -.2rem;
+            margin-inline: auto;
+        }
     }
 
 
 
     &__nav-list-sub {
-        height: 28rem;
+        heighgt: 45vh;
         list-style: none;
         display: flex;
-        flex-direction: column;
-        overflow-y: scroll;
+        align-items: center;
         gap: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        margin-left: 3vw;
 
         &::-webkit-scrollbar {
-            width: 10px;
+            width: 20px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                transparent 70%,
+                rgba(255, 255, 255, .2) 70%,
+                rgba(255, 255, 255, .2) 100%
+            );
+            border-top-right-radius: 100px;
+            border-bottom-right-radius: 100px;
+            border-top-left-radius: 950px;
+            border-bottom-left-radius: 930px;
         }
 
         @include breakpoint-up(xlarge) {
@@ -237,14 +308,20 @@
     }
 
     &__nav-item-sub {
-        height: 12.2rem;
-        width: 12.2rem;
-        background-color: #efefef;
+        heifghtf: 5rem;
+        width: 13rem;
+        background-cfolor: #efefef;
+        background-coflor: rgba(255, 255, 255, .3);
+        background-color: #eee;
         padding: 1rem;
-        border-radius: 20px;
+        border-radifus: 20px;
+        margin-left: 0rem;
     }
 
     &__nav-link-sub {
+        color: #222;
+        font-size: 1.6rem;
+        font-weight: 600;
         &:link,
         &:visited {
         }
@@ -265,7 +342,11 @@
     bottom: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
+<<<<<<< HEAD
     font-size: 1.4rem;
 
     display: none;
+=======
+    font-size: 1.6rem;
+>>>>>>> parent of 443cbf3 (update revertable)
 }
