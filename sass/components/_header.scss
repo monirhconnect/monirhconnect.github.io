@@ -18,24 +18,16 @@
         background-color: transparent;
         background-image: linear-gradient(
             180deg, 
-<<<<<<< HEAD
             var(--primary) 0%, 
             var(--primary) 6rem,
-            #ddd 6rem, 
-            #ddd 91vh,
+            rgba(0, 0, 0, .15) 6rem, 
+            rgba(0, 0, 0, .15) 91vh,
             #eee 91vh,
             #eee 100vh
         );
         padding-inline: 1.5rem;
         margin-inline: auto;
         //transition: all .5s ease-in-out;
-=======
-            var(--primary) 6.1rem, 
-            #cf8700 6.1rem, 
-            #cf8700 92%,
-            #af7200 92%,
-            #af7200 100%);
->>>>>>> parent of 443cbf3 (update revertable)
 
         &::after {
             content: "";
@@ -104,16 +96,13 @@
     }
 
     &__nav-area {
-<<<<<<< HEAD
         visibility: hidden;
         opacity: 0;
-        margin-top: 10vh;
-        transfgorm: translateY(-35%);
-=======
-        margin-top: 8rem;
-        margin-right: .5rem;
-        text-align: right;
->>>>>>> parent of 443cbf3 (update revertable)
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin-top: 25vh;
+        transform: translateY(-35%);
 
         @include breakpoint-up(xlarge) {
             display: block;
@@ -122,33 +111,29 @@
 
     &__nav-list {
         list-style: none;
-        display: flex;
-        gap: 1rem;
-        
+        margin-left: 1rem;
 
         &:nth-child(1) {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2.5rem;
-            margin-bottom: 2.8rem;
-            position: relative;
+            margin-right: auto;
+            margin-top: 10.4vh;
+            height: fit-content;
+            width: 30rem;
+            border-radius: 15px;
 
-            &::after {
-                content: "";
-                display: block;
-                height: 1px;
-                width: 27.1rem;
-                width: 30.4rem;
-                background-color: #6f6f6f;
-                position: absolute;
-                bottom: -.2rem;
-                margin-inline: auto;
+            .header__nav-item {
+                margin-top: .5rem;
+                margin-bottom: .5rem;
+
+                &:last-child {
+                    margin-bottom: .8rem;
+                }
             }
         }
 
         &:nth-child(2) {
-            margin-lefft: 4.5vw;
+            margin-top: 10vh;
+            margin-letft: -1rem;
+            margin-right: 1rem;
         }
 
         @include breakpoint-up(medium) {
@@ -171,12 +156,16 @@
         &:link,
         &:visited {
             font-size: 2.4rem; //4.8rem
-            font-weight: 500;
+            display: inline-block;
+            width: 100%;
+            color: #ddd;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
             text-decoration: none;
-            color: #222;
-            background-ctolor: rgba(255, 255, 255, 0.3);
-            padding-inline: .8rem;
-            padding-bottom: .5rem;
+            font-weight: 500;
+            padding-inline: 1.5rem;
+            padding-bottom: .2rem;
+            margin-bottom: 1rem;
             transition: all var(--transition-duration);
 
             @include breakpoint-up(medium) {
@@ -223,42 +212,30 @@
     }
 
     &__nav-label {
-        color: #222;
-        background-cotlor:rgba(255, 255, 255, .3);
+        color: #ddd;
+        background-color:rgba(255, 255, 255, .3);
         font-size: 2.4rem;
         font-weight: 500;
-        margin-bottom: 0rem;
-        padding-inline: 1rem;
-        margin-lefft: -1.5rem;
-        display: inline-block;
-        position: relative;
-
-        &::after {
-            content: "";
-            display: block;
-            height: 1px;
-            width: 27.1rem;
-            width: 30.4rem;
-            background-color: #6f6f6f;
-            position: absolute;
-            bottom: -.2rem;
-            margin-inline: auto;
-        }
+        margin-bottom: 2rem;
+        padding-inline: 2rem;
+        border-radius: 0;
     }
 
 
 
     &__nav-list-sub {
-        heighgt: 45vh;
+        height: 45vh;
         list-style: none;
         display: flex;
+        flex-direction: column;
         align-items: center;
         gap: 2rem;
         padding-top: 2rem;
         padding-bottom: 2rem;
-        overflow-y: hidden;
-        overflow-x: scroll;
-        margin-left: 3vw;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    
+        backgroundg-color: red;
 
         &::-webkit-scrollbar {
             width: 20px;
@@ -308,20 +285,15 @@
     }
 
     &__nav-item-sub {
-        heifghtf: 5rem;
-        width: 13rem;
-        background-cfolor: #efefef;
-        background-coflor: rgba(255, 255, 255, .3);
-        background-color: #eee;
+        height: 8rem;
+        width: 7.5rem;
+        background-color: #efefef;
         padding: 1rem;
-        border-radifus: 20px;
-        margin-left: 0rem;
+        border-radius: 20px;
+        margin-left: 2.2rem;
     }
 
     &__nav-link-sub {
-        color: #222;
-        font-size: 1.6rem;
-        font-weight: 600;
         &:link,
         &:visited {
         }
@@ -342,11 +314,7 @@
     bottom: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
-<<<<<<< HEAD
     font-size: 1.4rem;
 
     display: none;
-=======
-    font-size: 1.6rem;
->>>>>>> parent of 443cbf3 (update revertable)
 }
