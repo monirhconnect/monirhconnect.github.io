@@ -7,7 +7,6 @@ svg[class*="icon"] {
         height: 3rem;
         width: 3rem;
         fill: #fff;
-        margin-right: .5rem;
 
         @include breakpoint-up(xlarge) {
             display: none;

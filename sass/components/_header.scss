@@ -20,12 +20,12 @@
             180deg, 
             var(--primary) 0%, 
             var(--primary) 6rem,
-            rgba(0, 0, 0, .15) 6rem, 
-            rgba(0, 0, 0, .15) 91vh,
+            rgba(0, 0, 0, .1) 6rem, 
+            rgba(0, 0, 0, .1) 91vh,
             #eee 91vh,
             #eee 100vh
         );
-        padding-inline: 1.5rem;
+        padding-inline: 1rem;
         margin-inline: auto;
         //transition: all .5s ease-in-out;
 
@@ -91,16 +91,17 @@
     &__logo-link {
         text-decoration: none;
         color: var(--white);
-        padding: 1rem 1rem 1rem .5rem;
+        padding: 1rem 1rem 1rem 0;
         margin-right: auto;
     }
 
     &__nav-area {
         visibility: hidden;
         opacity: 0;
-        display: flex;
-        justify-content: center;
-        gap: 3rem;
+        width: 100%;
+        dispflay: flex;
+        justify-contentf: center;
+        garp: 3rem;
         margin-top: 25vh;
         transform: translateY(-35%);
 
@@ -111,7 +112,7 @@
 
     &__nav-list {
         list-style: none;
-        margin-left: 1rem;
+        margin-inline: auto;
 
         &:nth-child(1) {
             margin-right: auto;
@@ -149,23 +150,18 @@
     }
 
     &__nav-item {
-        
+        font-size: 3.6rem;
+        font-weight: 600;
+        border-bottom: 2px solid #999;
     }
 
     &__nav-link {
         &:link,
         &:visited {
-            font-size: 2.4rem; //4.8rem
-            display: inline-block;
+            display: block;
             width: 100%;
-            color: #ddd;
-            background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 3px;
             text-decoration: none;
-            font-weight: 500;
-            padding-inline: 1.5rem;
-            padding-bottom: .2rem;
-            margin-bottom: 1rem;
+            color: #efefef;
             transition: all var(--transition-duration);
 
             @include breakpoint-up(medium) {
@@ -212,30 +208,16 @@
     }
 
     &__nav-label {
-        color: #ddd;
-        background-color:rgba(255, 255, 255, .3);
-        font-size: 2.4rem;
-        font-weight: 500;
-        margin-bottom: 2rem;
-        padding-inline: 2rem;
-        border-radius: 0;
+        color: #efefef;
     }
 
 
 
+
+
+
     &__nav-list-sub {
-        height: 45vh;
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        overflow-y: scroll;
-        overflow-x: hidden;
-    
-        backgroundg-color: red;
+        display: none;
 
         &::-webkit-scrollbar {
             width: 20px;
